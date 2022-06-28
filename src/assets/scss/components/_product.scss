@@ -1,0 +1,14 @@
+.product {
+  &__footer {
+    transition: 100ms;
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  &:hover {
+    .product__footer {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+}

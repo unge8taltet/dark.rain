@@ -1,5 +1,5 @@
 import "@icons/logo.svg"
-import "@icons/card.svg"
+import "@icons/cart.svg"
 import "@icons/heart.svg"
 import "@icons/new.svg"
 import "@icons/search.svg"
