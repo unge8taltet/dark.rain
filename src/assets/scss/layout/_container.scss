@@ -1,0 +1,12 @@
+@import "../spec/mixins";
+
+.container {
+    margin: 0 auto;
+    padding: 0 16px;
+    width: 100%;
+
+    @include media-up(md) {
+        padding: 0 30px;
+        max-width: 1282px + 60px;
+    }
+}

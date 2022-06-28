@@ -1,0 +1,51 @@
+include ../components/mixins/icon
+header.header
+    .header-top
+        .container
+            .header__wrapper
+                nav.header-top__nav
+                    ul
+                        li
+                            a(href="#") Магазины
+                        li
+                            a(href="#") Доставка и оплата
+                        li
+                            a(href="#") Контакты
+                .header-top__contacts
+                    a(href="tel:+78126158843").header-top__phone.header-top__item +7 (812) 615-88-43
+                    button.header-top__icon.header-top__item
+                        +icon("search")
+                    a(href="#").header-top__icon.header-top__item
+                        +icon("user")
+    .header-main
+        .container
+            .header__wrapper
+                .logotype
+                    a(href="/")
+                        +icon("logo")
+                nav.header-main__navs
+                    ul
+                        li
+                            a(href="#") Новинки
+                        li
+                            a(href="#") Каталог
+                        li
+                            a(href="#") Сертификаты
+                        li
+                            a(href="#") Instashop
+                        li.toggled Покупателям
+                            ul
+                                li
+                                    a(href="#") О Нас
+                                li
+                                    a(href="#") Доставка и оплата
+                                li
+                                    a(href="#") Как выбрать размер
+                                li
+                                    a(href="#") Оферта
+                                li
+                                    a(href="#") Гарантии и возврат
+                                li
+                                    a(href="#") Магазины
+                                li
+                                    a(href="#") Вакансии
