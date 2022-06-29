@@ -1,0 +1,38 @@
+.inspiration {
+  margin-bottom: 268px;
+
+  &__title {
+    margin-bottom: 0;
+  }
+
+  &__wrapper {
+    margin-bottom: 39px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+
+    .icon {
+      margin-left: 29px;
+      width: 13px;
+      height: 13px;
+    }
+  }
+
+  &__text {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 30px;
+    color: #313131;
+  }
+
+  &__link {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 17px;
+    text-align: center;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+    color: #313131;
+  }
+}

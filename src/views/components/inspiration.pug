@@ -1,0 +1,32 @@
+.inspiration
+    .container
+        h2.title.inspiration__title ВДОХНОВЛЯЙТЕСЬ И ПОКУПАЙТЕ
+        .inspiration__wrapper
+            p.inspiration__text Покупка украшений из instagram
+            a(href="#").inspiration__link СМОТРЕТЬ instashop
+                +icon("new")
+        .slider
+            .swiper.inspiration__swiper
+                .swiper-wrapper
+                    .swiper-slide.photo
+                        a(href="#").photo__link
+                            img(src=require("../../public/images/inspiration-1.jpg") alt="").photo__image
+                    .swiper-slide.photo
+                        a(href="#").photo__link
+                            img(src=require("../../public/images/inspiration-1.jpg") alt="").photo__image
+                    .swiper-slide.photo
+                        a(href="#").photo__link
+                            img(src=require("../../public/images/inspiration-1.jpg") alt="").photo__image
+                    .swiper-slide.photo
+                        a(href="#").photo__link
+                            img(src=require("../../public/images/inspiration-1.jpg") alt="").photo__image
+                    .swiper-slide.photo
+                        a(href="#").photo__link
+                            img(src=require("../../public/images/inspiration-1.jpg") alt="").photo__image
+                    .swiper-slide.photo
+                        a(href="#").photo__link
+                            img(src=require("../../public/images/inspiration-1.jpg") alt="").photo__image
+            button.slider__arrow.slider__arrow--prev.inspiration__arrow--prev
+                +icon("prev")
+            button.slider__arrow.slider__arrow--next.inspiration__arrow--next
+                +icon("next")
