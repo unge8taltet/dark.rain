@@ -1,11 +1,16 @@
 .btn {
-    padding: 14px 24px 16px;
-    border-radius: 10px;
-    background-color: #F6F6F8;
-    font-weight: bold;
+    padding: 19px 0;
+    font-size: 16px;
+    line-height: 106%;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+    max-width: 317px;
+    width: 100%;
 
-    &--primary {
-        background-color: rgba(0, 87, 255, 0.15);
-        color: #0057FF;
+    &--dark {
+        background: #313131;
+        color: #fff;
+        height: 55px;
     }
 }

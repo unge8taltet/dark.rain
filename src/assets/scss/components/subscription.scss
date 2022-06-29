@@ -1,10 +1,20 @@
-.subscription{
-  margin-top: 70px;
-  display: flex;
-  max-width: 792px;
+.subscription {
   margin-bottom: 100px;
+
+  &__container {
+    max-width: 792px + 60px;
+  }
+
+  &__form {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 33px;
+  }
 }
-.subscription__title{
+
+.subscription__title {
   text-align: center;
   font-size: 20px;
   font-weight: 700;

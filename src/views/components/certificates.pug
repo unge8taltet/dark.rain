@@ -1,13 +1,12 @@
 .certificates
-    .container
+    .container.certificates__container
         .certificates__wrapper
-            certificates__content
-                h2.title Подарочные
-                    br
-                    |
-                    span
-                    |Сертификаты
+            .certificates__content
+                h2.title.certificates__title
+                    span Подарочные
+                    span Сертификаты
                 a(href="#").certificates__link ПРИОБРЕСТИ
                     +icon("new")
-            img(src=require("../../public/images/certificates.jpg") alt="").certificates__image
+            div
+                img(src=require("../../public/images/certificates.png") alt="").certificates__image
 

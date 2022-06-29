@@ -1,25 +1,43 @@
-.certificates{
+.certificates {
   background-color: #F3F3F3;
-  background-attachment: fixed;
-  background-position: center;
+  margin-bottom: 100px;
+
+  &__container {
+    max-width: 1058px + 60px;
+  }
 }
-.certificates__wrapper{
+
+.certificates__title {
+  display: block;
+  font-weight: 400;
+  font-size: 46px;
+  line-height: 150%;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+
+  & > span {
+    display: block;
+
+    &:last-child {
+      float: right;
+    }
+  }
+}
+
+.certificates__wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1075px;
   margin-top: 100px;
   margin-bottom: 100px;
 }
 
-.certificates__content{
-  margin-right: 115px;
-  align-items: center;
-  .span{
-    margin-left: 130px;
-  }
+.certificates__content {
+  max-width: 555px;
+  width: 100%;
 }
-.certificates__link{
+
+.certificates__link {
   font-size: 16px;
   font-weight: 700;
   line-height: 17px;
@@ -27,6 +45,8 @@
   letter-spacing: 0.01em;
   text-transform: uppercase;
   color: #313131;
+  margin-top: 60px;
+
   .icon {
     margin-left: 20px;
     width: 13px;
@@ -34,8 +54,12 @@
   }
 
 }
-.certificates__image{
-  border-radius: 0 194px;
+
+.certificates__image {
+  border-radius: 0px 194px;
   transform: matrix(-1, 0, 0, 1, 0, 0);
+  width: 388px;
+  object-fit: cover;
+  height: 534px;
 }
 

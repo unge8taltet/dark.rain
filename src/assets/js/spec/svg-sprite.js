@@ -1,6 +1,7 @@
 import "@icons/logo.svg"
 import "@icons/cart.svg"
 import "@icons/heart.svg"
+import "@icons/heart-filled.svg"
 import "@icons/new.svg"
 import "@icons/search.svg"
 import "@icons/user.svg"

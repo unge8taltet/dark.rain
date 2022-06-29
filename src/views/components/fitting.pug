@@ -1,18 +1,21 @@
 .fitting
     .container
-        .fitting__content
-            img(src=require("../../public/images/fitting-1.jpg") alt="").fitting__image
-            .fitting__wrapper
-                h2.title ПРИМЕРКА УКРАШЕНИЙ
-                    br
-                    | ПЕРЕД ПОКУПКОЙ
-                p.fitting__text Если вы сомневаетесь в выборе подходящего
-                    br
-                    |украшения или не уверены в размере изделия,
-                    br
-                    |закажите доставку нескольких украшений
-                    br
-                    |и определитесь с выбором на месте!
-                a(href="#").fitting__link ПОДОБРАТЬ УКРАШЕНИЯ
-                    +icon("new")
-                img(src=require("../../public/images/fitting-2.jpg") alt="").fitting__image--2
+        .fitting__wrapper
+            div.fitting__image
+                img(src=require("../../public/images/fitting-1.jpg") alt="")
+            div
+                .fitting__content
+                    h2.title ПРИМЕРКА УКРАШЕНИЙ
+                        br
+                        | ПЕРЕД ПОКУПКОЙ
+                    p.fitting__text Если вы сомневаетесь в выборе подходящего
+                        br
+                        | украшения или не уверены в размере изделия,
+                        br
+                        | закажите доставку нескольких украшений
+                        br
+                        | и определитесь с выбором на месте!
+                    a(href="#").fitting__link ПОДОБРАТЬ УКРАШЕНИЯ
+                        +icon("new")
+                div.fitting__image-2
+                    img(src=require("../../public/images/fitting-2.jpg") alt="")

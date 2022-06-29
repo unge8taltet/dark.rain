@@ -9,11 +9,12 @@
                         .product__header
                             img(src=require("../../public/images/bestsellers-1.jpg") alt="").product__image
                             .product__badges
-                                .bestsellers-item__icon
-                                    +icon("heart")
+                                span.product__badge -30%
+                                button.product__like.product__like--active
+                                    +icon("heart-filled")
                         .product__main
                             .product__info
-                                h3 COHOE
+                                h3.product__title COHOE
                                 .product__prices
                                     p.product__price.product__price--sale 2660
                                         span руб
@@ -25,114 +26,13 @@
                                 +icon("cart")
                                 | В корзину
                             button.product__pay Купить в 1 клик
-                    .swiper-slide.product
-                        a(href="#").product__link
-                        .product__header
-                            img(src=require("../../public/images/bestsellers-1.jpg") alt="").product__image
-                            .product__badges
-                                .bestsellers-item__icon
-                                    +icon("heart")
-                        .product__main
-                            .product__info
-                                h3 COHOE
-                                .product__prices
-                                    p.product__price.product__price--sale 2660
-                                        span руб
-                                    p.product__price 1850
-                                        span руб
-                            p.product__category Серьги из серебра
-                        .product__footer
-                            button.product__cart
-                                +icon("cart")
-                                | В корзину
-                            button.product__pay Купить в 1 клик
-
-                    .swiper-slide.product
-                        a(href="#").product__link
-                        .product__header
-                            img(src=require("../../public/images/bestsellers-1.jpg") alt="").product__image
-                            .product__badges
-                                .bestsellers-item__icon
-                                    +icon("heart")
-                        .product__main
-                            .product__info
-                                h3 COHOE
-                                .product__prices
-                                    p.product__price.product__price--sale 2660
-                                        span руб
-                                    p.product__price 1850
-                                        span руб
-                            p.product__category Серьги из серебра
-                        .product__footer
-                            button.product__cart
-                                +icon("cart")
-                                | В корзину
-                            button.product__pay Купить в 1 клик
-                    .swiper-slide.product
-                        a(href="#").product__link
-                        .product__header
-                            img(src=require("../../public/images/bestsellers-1.jpg") alt="").product__image
-                            .product__badges
-                                .bestsellers-item__icon
-                                    +icon("heart")
-                        .product__main
-                            .product__info
-                                h3 COHOE
-                                .product__prices
-                                    p.product__price.product__price--sale 2660
-                                        span руб
-                                    p.product__price 1850
-                                        span руб
-                            p.product__category Серьги из серебра
-                        .product__footer
-                            button.product__cart
-                                +icon("cart")
-                                | В корзину
-                            button.product__pay Купить в 1 клик
-
-                    .swiper-slide.product
-                        a(href="#").product__link
-                        .product__header
-                            img(src=require("../../public/images/bestsellers-1.jpg") alt="").product__image
-                            .product__badges
-                                .bestsellers-item__icon
-                                    +icon("heart")
-                        .product__main
-                            .product__info
-                                h3 COHOE
-                                .product__prices
-                                    p.product__price.product__price--sale 2660
-                                        span руб
-                                    p.product__price 1850
-                                        span руб
-                                p.product__category Серьги из серебра
-                        .product__footer
-                            button.product__cart
-                                +icon("cart")
-                                | В корзину
-                            button.product__pay Купить в 1 клик
-                    .swiper-slide.product
-                        a(href="#").product__link
-                        .product__header
-                            img(src=require("../../public/images/bestsellers-1.jpg") alt="").product__image
-                            .product__badges
-                                .bestsellers-item__icon
-                                    +icon("heart")
-                        .product__main
-                            .product__info
-                                h3 COHOE
-                                .product__prices
-                                    p.product__price.product__price--sale 2660
-                                        span руб
-                                    p.product__price 1850
-                                        span руб
-                                p.product__category Серьги из серебра
-                        .product__footer
-                            button.product__cart
-                                +icon("cart")
-                                | В корзину
-                            button.product__pay Купить в 1 клик
-
+                    include product
+                    include product
+                    include product
+                    include product
+                    include product
+                    include product
+                    include product
             button.slider__arrow.slider__arrow--prev.bestsellers__arrow--prev
                 +icon("prev")
             button.slider__arrow.slider__arrow--next.bestsellers__arrow--next

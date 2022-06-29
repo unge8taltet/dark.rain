@@ -21,6 +21,7 @@ export default {
             },
             modules: [Navigation],
         });
+
         new Swiper('.inspiration__swiper', {
             spaceBetween: 30,
             slidesPerView: 4,
