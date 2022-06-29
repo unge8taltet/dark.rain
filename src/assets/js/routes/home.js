@@ -21,6 +21,15 @@ export default {
             },
             modules: [Navigation],
         });
+        new Swiper('.inspiration__swiper', {
+            spaceBetween: 30,
+            slidesPerView: 4,
+            navigation: {
+                nextEl: '.inspiration__arrow--next',
+                prevEl: '.inspiration__arrow--prev',
+            },
+            modules: [Navigation],
+        });
     },
     finalize() {
         console.log('home finalize')

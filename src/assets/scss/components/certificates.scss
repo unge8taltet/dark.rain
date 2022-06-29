@@ -1,0 +1,41 @@
+.certificates{
+  background-color: #F3F3F3;
+  background-attachment: fixed;
+  background-position: center;
+}
+.certificates__wrapper{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1075px;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.certificates__content{
+  margin-right: 115px;
+  align-items: center;
+  .span{
+    margin-left: 130px;
+  }
+}
+.certificates__link{
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 17px;
+  text-align: center;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  color: #313131;
+  .icon {
+    margin-left: 20px;
+    width: 13px;
+    height: 13px;
+  }
+
+}
+.certificates__image{
+  border-radius: 0 194px;
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+
