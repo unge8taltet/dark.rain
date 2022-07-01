@@ -6,6 +6,8 @@ html(lang="ru")
         meta(name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0")
         meta(http-equiv="X-UA-Compatible" content="ie=edge")
         title #{headTitle} - Darkrain
-    body(class=pageClass)
+    body
         include header
-        block content
+        main(class=pageClass)
+            block content
+        include footer

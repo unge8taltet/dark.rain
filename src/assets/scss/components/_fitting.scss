@@ -1,0 +1,51 @@
+.fitting {
+  margin-bottom: 130px;
+
+  &__image {
+    margin-top: -66px;
+    margin-right: 81px;
+  }
+
+  &__wrapper {
+    display: flex;
+
+    & > div {
+      width: 100%;
+    }
+  }
+
+  &__contnet {
+    max-width: 422px;
+  }
+
+  &__text {
+    margin-bottom: 60px;
+    margin-top: 30px;
+  }
+
+  &__image-2 {
+    margin-top: 155px;
+    margin-right: 120px;
+    max-width: 507px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  &__link {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 106%;
+    text-align: center;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+    color: #313131;
+  }
+
+  .icon {
+    margin-left: 20px;
+    width: 13px;
+    height: 13px;
+  }
+}
+

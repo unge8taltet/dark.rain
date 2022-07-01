@@ -1,4 +1,64 @@
-include ../components/mixins/icon
-header.header
-    .container
+footer.footer
+    .footer__main
+        .container.footer__container
+            .footer__cells
+                div.footer__cell
+                    a(href="/")
+                        +icon("logo-2")
+                div.footer__cell
+                    nav.footer__nav
+                        ul
+                            li
+                                a(href="#") Новинки
+                            li.current
+                                a(href="#") Все украшения
+                            li
+                                a(href="#") Категории
+                            li
+                                a(href="#") Сертификаты
+                            li
+                                a(href="#") Instashop
+                div.footer__cell
+                    nav.footer__nav
+                        ul
+                            li
+                                a(href="#") О Нас
+                            li
+                                a(href="#") Доставка и оплата
+                            li
+                                a(href="#") Как выбрать размер
+                            li
+                                a(href="#") Оферта
+                            li
+                                a(href="#") Гарантии и возврат
+                            li
+                                a(href="#") Магазины
+                            li
+                                a(href="#") Вакансии
+                div.footer__cell
+                    p.footer__title Связаться с нами:
+                    a(href="tel:+78126158843").footer__phone +7 (812) 615-88-43
+                    p.footer__title Мы в месенджерах:
+                    div.socials
+                        a(href="/").socials__item
+                            +icon("vk")
+                        a(href="/").socials__item
+                            +icon("instagram")
+                        a(href="/").socials__item
+                            +icon("telegram")
+                        a(href="/").socials__item
+                            +icon("whatsapp")
+
+    .footer__bottom
+        .container.footer__container
+            .footer__cells.footer__cells--center
+                div
+                    p.footer__copyright © 2021. Darkrain.store. Все права защищены
+                div
+                    p.footer__made
+                        span Сделано в
+                        a(href="/")
+                            +icon("serenity")
+
+
 
