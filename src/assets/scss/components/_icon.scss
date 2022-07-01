@@ -1,18 +1,28 @@
 .icon {
-    display: inline-block;
+  display: inline-block;
 
-    &--search {
-        width: 15px;
-        height: 15px;
-    }
+  &--search {
+    width: 15px;
+    height: 15px;
+  }
 
-    &--user {
-        width: 15px;
-        height: 15px;
-    }
+  &--user {
+    width: 15px;
+    height: 15px;
+  }
 
-    &--logo-2{
-        width: 167px;
-        height: 142px;
-    }
+  &--logo-2 {
+    width: 167px;
+    height: 142px;
+  }
+
+  &--vk, &--instagram, &--telegram, &--whatsapp {
+    height: 36px;
+    width: 36px;
+  }
+
+  &--serenity {
+    height: 28px;
+    width: 104px;
+  }
 }

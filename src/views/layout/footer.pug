@@ -1,16 +1,16 @@
 footer.footer
-    .footer__top
+    .footer__main
         .container.footer__container
-            .footer__wrapper
-                div
+            .footer__cells
+                div.footer__cell
                     a(href="/")
-                       +icon("logo-2")
-                div
+                        +icon("logo-2")
+                div.footer__cell
                     nav.footer__nav
                         ul
                             li
                                 a(href="#") Новинки
-                            li
+                            li.current
                                 a(href="#") Все украшения
                             li
                                 a(href="#") Категории
@@ -18,7 +18,7 @@ footer.footer
                                 a(href="#") Сертификаты
                             li
                                 a(href="#") Instashop
-                div
+                div.footer__cell
                     nav.footer__nav
                         ul
                             li
@@ -35,31 +35,29 @@ footer.footer
                                 a(href="#") Магазины
                             li
                                 a(href="#") Вакансии
-                div
-                    p.footer__contact Связаться с нами:
-                    div
-                        .footer-top__contacts
-                            a(href="tel:+78126158843").header-top__phone.header-top__item +7 (812) 615-88-43
-                    div
-                        p.footer__contact Мы в месенджерах:
-                        div
-                            a(href="/").footer__contact-icon
-                                +icon("vk")
-                            a(href="/").footer__contact-icon
-                                +icon("instagram")
-                            a(href="/").footer__contact-icon
-                                +icon("telegram")
-                            a(href="/").footer__contact-icon
-                                +icon("whatsapp")
+                div.footer__cell
+                    p.footer__title Связаться с нами:
+                    a(href="tel:+78126158843").footer__phone +7 (812) 615-88-43
+                    p.footer__title Мы в месенджерах:
+                    div.socials
+                        a(href="/").socials__item
+                            +icon("vk")
+                        a(href="/").socials__item
+                            +icon("instagram")
+                        a(href="/").socials__item
+                            +icon("telegram")
+                        a(href="/").socials__item
+                            +icon("whatsapp")
 
-    .footer__main
-        .container
-            .footer__wrapper
+    .footer__bottom
+        .container.footer__container
+            .footer__cells.footer__cells--center
                 div
-                    p.footer__rights © 2021. Darkrain.store. Все права защищены
+                    p.footer__copyright © 2021. Darkrain.store. Все права защищены
                 div
-                    p.footer__serenity Сделано в
-                        a(href="/").footer__serenity
+                    p.footer__made
+                        span Сделано в
+                        a(href="/")
                             +icon("serenity")
 
 
