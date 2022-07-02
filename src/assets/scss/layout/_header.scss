@@ -9,6 +9,10 @@
 .header-top {
   border-bottom: 1px solid #E6E6E6;
 
+  &__container {
+    position: relative;
+  }
+
   &__nav {
     ul {
       padding: 0;
@@ -21,6 +25,7 @@
         line-height: 150%;
         opacity: 0.5;
         transition: 300ms;
+        position: relative;
 
         &:hover {
           opacity: 1;
@@ -38,10 +43,21 @@
     padding-right: 20px;
     padding-left: 20px;
     font-weight: 100;
+    transition: 300ms;
+    color: #101010;
+
+    &:hover {
+      color: #000;
+      text-shadow: 0 0 0 rgba(0, 0, 0, 1);
+    }
   }
 
   &__icon {
     width: 50px;
+
+    .icon {
+      color: #000000;
+    }
   }
 
   &__item {
@@ -49,9 +65,57 @@
     align-items: center;
     justify-content: center;
     height: 50px;
+    cursor: pointer;
 
     &:not(:last-child) {
       border-right: 1px solid #E6E6E6;
+    }
+  }
+
+  &__search {
+
+    .search {
+      background: #fff;
+      overflow: hidden;
+      position: absolute;
+      display: flex;
+      align-items: center;
+      width: 0;
+      max-width: 980px;
+      right: 65px;
+      height: 40px;
+      top: 50%;
+      transform: translateY(-50%);
+      padding: 1px;
+      border: 1px solid #E6E6E6;
+      opacity: 0;
+      visibility: hidden;
+      transition: 300ms;
+      z-index: 101;
+
+      @include media-up(md) {
+        right: 80px;
+      }
+
+      &__field {
+        padding: 0 20px;
+        height: 100%;
+      }
+
+      &__submit {
+        min-width: 50px;
+        height: 40px;
+        border-left: 1px solid #E6E6E6;
+        color: #000000;
+      }
+    }
+
+    &--visible {
+      .search {
+        visibility: visible;
+        opacity: 1;
+        width: calc(100% - (60px + 20px));
+      }
     }
   }
 }
@@ -71,8 +135,29 @@
         font-size: 14px;
         line-height: 150%;
         color: #313131;
+        position: relative;
 
-        &.toggled {
+        &:not(.has-children) {
+          &:after {
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            content: '';
+            border: 1px solid #313131;
+            width: 0;
+            opacity: 0;
+            transition: 300ms;
+          }
+
+          &:hover {
+            &:after {
+              width: 100%;
+              opacity: 1;
+            }
+          }
+        }
+
+        &.has-children {
           cursor: pointer;
           position: relative;
           padding-left: 21px;
@@ -83,26 +168,74 @@
             top: 50%;
             transform: translate(-50%);
             left: 0;
-            background: #313131;
-          }
-
-          &:after {
+            border-bottom: 1px solid #313131;
             width: 12px;
-            height: 1px;
           }
 
           &:before {
-            width: 1px;
-            height: 12px;
-            top: calc(50% - (11px / 2));
+            transform: translate(-50%) rotate(90deg);
+            transition: 300ms;
+          }
+
+          &:hover {
+            &:before {
+              transform: translate(-50%) rotate(0);
+              opacity: 0;
+            }
+
+            & > ul {
+              opacity: 1;
+              visibility: visible;
+            }
           }
         }
 
         & > ul {
-          display: none;
+          position: absolute;
+          top: 100%;
+          right: -16px;
+          background: #FCFCFA;
+          margin-top: 16px;
+          padding: 30px;
+          width: 191px;
+          overflow: hidden;
+          opacity: 0;
+          visibility: hidden;
+          transition: 300ms;
 
           & > li {
+            font-size: 14px;
+            line-height: 150%;
+            color: #313131;
+            opacity: 0.5;
+            margin-bottom: 15px;
+            transition: 300ms;
+            position: relative;
+            display: table;
 
+            &:after {
+              position: absolute;
+              bottom: -1px;
+              left: 0;
+              content: '';
+              border: 1px solid #313131;
+              width: 0;
+              opacity: 0;
+              transition: 300ms;
+            }
+
+            &:hover {
+              opacity: 1;
+
+              &:after {
+                width: 100%;
+                opacity: 1;
+              }
+            }
+
+            &:last-child {
+              margin-bottom: 0;
+            }
           }
         }
       }

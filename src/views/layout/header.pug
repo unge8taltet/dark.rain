@@ -1,7 +1,7 @@
 include ../components/mixins/icon
 header.header
     .header-top
-        .container
+        .container.header-top__container
             .header__wrapper
                 nav.header-top__nav
                     ul
@@ -13,8 +13,12 @@ header.header
                             a(href="#") Контакты
                 .header-top__contacts
                     a(href="tel:+78126158843").header-top__phone.header-top__item +7 (812) 615-88-43
-                    button.header-top__icon.header-top__item
+                    div.header-top__icon.header-top__item.header-top__search#search-button
                         +icon("search")
+                        form.search
+                            input(type="search" placeholder="Поиск товара" autofocus).search__field
+                            button(type="submit").search__submit
+                                +icon("search")
                     a(href="#").header-top__icon.header-top__item
                         +icon("user")
     .header-main
@@ -33,7 +37,8 @@ header.header
                             a(href="#") Сертификаты
                         li
                             a(href="#") Instashop
-                        li.toggled Покупателям
+                        li.has-children
+                            a(href="#") Покупателям
                             ul
                                 li
                                     a(href="#") О Нас
