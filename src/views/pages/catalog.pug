@@ -5,5 +5,8 @@ block vars
     - pageClass = 'catalog'
     - headTitle = 'Catalog'
 block content
-    .container-small
-        p Lorem ipsum.
+    .container
+        include ../components/breadcrumbs
+        h1.page-title каталог
+        include ../components/catalog/categories
+        include ../components/catalog/filters

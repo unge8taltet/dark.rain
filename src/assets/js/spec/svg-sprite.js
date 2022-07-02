@@ -14,3 +14,6 @@ import "@icons/serenity.svg"
 
 import "@icons/next.svg"
 import "@icons/prev.svg"
+import "@icons/seperator.svg"
+import "@icons/info.svg"
+import "@icons/question.svg"

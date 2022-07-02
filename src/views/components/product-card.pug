@@ -1,0 +1,55 @@
+.product-card
+    .container
+        .product-card__wrapper
+            div.product-card__left
+                div
+                    img(src=require("../../public/images/card-1.jpg") alt="")
+                div
+                    img(src=require("../../public/images/card.jpg") alt="")
+                    img(src=require("../../public/images/card.jpg") alt="")
+                    img(src=require("../../public/images/card.jpg") alt="")
+                    img(src=require("../../public/images/card.jpg") alt="")
+                    img(src=require("../../public/images/card.jpg") alt="")
+                    img(src=require("../../public/images/card.jpg") alt="")
+            div.product-card__right
+                div.product-card__info
+                    div
+                        h1.product-card__title Chiloe
+                        button.product-card__like
+                            +icon("heart")
+                        p.product-card__article Арт. MR4001
+                    div
+                        p.product-card__subtitle Серьги из серебра
+                    div
+                        .product-card__prices
+                            p.product-card__price 4300
+                                span руб
+                    div
+                        button(type='submit').btn.btn--dark Добавить в корзину
+                        button.product__pay Купить в 1 клик
+                div.product-card__package
+                    div
+                        input(type="checkbox")
+                        p.priduct-card__package-ok Добавить подарочную упаковку
+                    div
+                        img(src=require("../../public/images/package.jpg") alt="")
+                        p.product-card__package-name Подарочная
+                            br
+                            |упаковка
+                        p.product-card__package-price 150 руб
+                        button.product-card__package-info
+                            +icon("info")
+                div.product-card__question
+                    div.product-card__question-socials
+                        a(href="/").socials__item
+                            +icon("telegram")
+                        a(href="/").socials__item
+                            +icon("whatsapp")
+                    div
+                        p.product-card__question-socials Задайте нам вопрос
+                    div
+                        button.product-card__question-info
+                            +icon("question")
+
+
+
