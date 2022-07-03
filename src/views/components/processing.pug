@@ -1,0 +1,74 @@
+.processing
+    .container
+        .processing__wrapper
+            .processing__ordering
+                .processing__contacts
+                    h3.processing__title КОНТАКТНАЯ ИНФОРМАЦИЯ:
+                    input(type="email" placeholder="Электронный адрес (еmail) *").
+                    .processing-package
+                        label.processing-package__checkbox
+                            input(type="checkbox")
+                            p Получать новости и специальные предложения
+                    .processing__contact
+                        input(type="user" placeholder="Имя *").
+                        input(type="formaction" placeholder="Город *").
+                        input(type="user" placeholder="Фамилия *").
+                        input(type="tel" placeholder="Мобильный телефон *").
+                .processing__delivery
+                    h3.processing__title Доставка:
+                    select(name="select" size="" multiple)
+                        option("" value="") Пункт выдачи СДЭК (Выбрать пункт выдачи)
+                        option("selected" value="") Курьером до двери
+                        option("" value="") Самовывоз из магазина (Санкт-Петербург, Набережная канала Грибоедова 99, 2 этаж)
+                        option("" value="") Самовывоз из магазина (Москва, Оружейный переулок, 5)
+                        option("" value="") Самовывоз из магазина (Москва, Новодмитровская 1, стр. 23 )
+                    //form(action="")
+                        input(type="radio" value="nedzen" placeholder="Мобильный телефон" )
+                .processing__address
+                    h3.processing__title Адрес:
+                    input(type="address" placeholder="Улица, дом, квартира *").
+                .processing__payment
+                    h3.processing__title Способ оплаты:
+                    select(name="select" size="" multiple)
+                        option("selected" value="") Оплата при получении
+            .processing__basket
+                .processing__options
+                    p.processing__text В корзине 2 товара
+                    button.product__editing Редактировать товары
+                .processing__products
+                    .processing__product
+                        .processing__image
+                            img(src=require("../../public/images/product.jpg") alt="")
+                        .processing__component
+                            p.processing__name COHOE
+                            p.processing__corps Серьги из серебра
+                            p.processing__article арт. A3051
+                        .processing__characteristic
+                            p.processing__amount Количество
+                            p.processing__unit 1 шт.
+                            p.processing__price 1850
+                                span руб
+                .processing__coupon
+                    input(type="text" placeholder="Код купона").
+                    input(type="submit" value="Применить")
+                .processing__check
+                    div
+                        p.processing__calculation Сумма:
+                        p.processing__result 1860 руб
+                    div
+                        p.processing__calculation Доставка:
+                        p.processing__result 540 руб
+                    div
+                        p.processing__calculation Скидки:
+                        p.processing__result -340 руб
+                    div.processing__total
+                        p.procedding-total__check Итого:
+                        p.processing-total__result 1850
+                            span руб
+                        button(type='submit').btn.btn--dark Оформить заказ
+
+
+
+
+
+

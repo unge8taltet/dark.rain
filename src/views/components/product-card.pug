@@ -1,55 +1,72 @@
 .product-card
     .container
         .product-card__wrapper
-            div.product-card__left
-                div
-                    img(src=require("../../public/images/card-1.jpg") alt="")
-                div
-                    img(src=require("../../public/images/card.jpg") alt="")
-                    img(src=require("../../public/images/card.jpg") alt="")
-                    img(src=require("../../public/images/card.jpg") alt="")
-                    img(src=require("../../public/images/card.jpg") alt="")
-                    img(src=require("../../public/images/card.jpg") alt="")
-                    img(src=require("../../public/images/card.jpg") alt="")
-            div.product-card__right
-                div.product-card__info
+            .product-card__left
+                .card-gallary
+                    .card-gallary__main
+                        img(src=require("../../public/images/card-1.jpg") alt="")
+                    .card-gallary__items
+                        img(src=require("../../public/images/card.jpg") alt="")
+                        img(src=require("../../public/images/card.jpg") alt="")
+                        img(src=require("../../public/images/card.jpg") alt="")
+                        img(src=require("../../public/images/card.jpg") alt="")
+                        img(src=require("../../public/images/card.jpg") alt="")
+                        img(src=require("../../public/images/card.jpg") alt="")
+            .product-card__right
+                .product-card__name
                     div
                         h1.product-card__title Chiloe
                         button.product-card__like
                             +icon("heart")
+                    div
                         p.product-card__article Арт. MR4001
-                    div
-                        p.product-card__subtitle Серьги из серебра
-                    div
-                        .product-card__prices
-                            p.product-card__price 4300
-                                span руб
-                    div
-                        button(type='submit').btn.btn--dark Добавить в корзину
-                        button.product__pay Купить в 1 клик
-                div.product-card__package
-                    div
+                p.product-card__subtitle Серьги из серебра
+                .product-card__prices
+                    p.product-card__price 4300
+                        span руб
+                .product-card__button
+                    button(type='submit').btn.btn--dark Добавить в корзину
+                    button.product__pay Купить в 1 клик
+                .product-package
+                    label.product-package__checkbox
                         input(type="checkbox")
-                        p.priduct-card__package-ok Добавить подарочную упаковку
-                    div
-                        img(src=require("../../public/images/package.jpg") alt="")
-                        p.product-card__package-name Подарочная
-                            br
-                            |упаковка
-                        p.product-card__package-price 150 руб
-                        button.product-card__package-info
+                        p Добавить подарочную упаковку
+                    .product-package__wrapper
+                        .product-package__image
+                            img(src=require("../../public/images/package.jpg") alt="")
+                            .product-package__info
+                                p.product-package__name Подарочная упаковка
+                                p.product-package__price 150 руб
+                        .product-package__help
                             +icon("info")
-                div.product-card__question
-                    div.product-card__question-socials
+                .product-question
+                    div.socials
                         a(href="/").socials__item
                             +icon("telegram")
                         a(href="/").socials__item
                             +icon("whatsapp")
-                    div
-                        p.product-card__question-socials Задайте нам вопрос
-                    div
-                        button.product-card__question-info
+                    div.product-question__info
+                        p Задайте нам вопрос
+                        button.product-question__icon
                             +icon("question")
+                .product-card__dropdowns
+                    .dropdown
+                        .dropdown__header
+                            p.dropdown__title Описание и характеристики
+                        .dropdown__main
 
+                    .dropdown
+                        .dropdown__header
+                            p.dropdown__title Доставка
+                    .dropdown
+                        .dropdown__header
+                            p.dropdown__title Оплата
+                    .dropdown
+                        .dropdown__header
+                            p.dropdown__title Гарантии
+                .explanation
+                    p Если вы сомневаетесь в выборе подходящего украшения или не уверены в
+                        | размере изделия, закажите доставку нескольких украшений и определитесь
+                        | с выбором на месте!
 
 
