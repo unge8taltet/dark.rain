@@ -7,6 +7,12 @@
   text-transform: uppercase;
   color: #313131;
   margin-bottom: 45px;
+
+  @include media-down(md) {
+    font-size: 20px;
+    line-height: 123.8%;
+    margin-bottom: 20px;
+  }
 }
 
 .page-title {

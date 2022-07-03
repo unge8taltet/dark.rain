@@ -9,3 +9,21 @@
     color: #747474;
   }
 }
+
+.field-checkbox {
+  display: flex;
+  align-items: center;
+
+  & > input {
+    width: auto;
+  }
+}
+
+.field-radio {
+  display: flex;
+  align-items: center;
+
+  & > input {
+    width: auto;
+  }
+}
