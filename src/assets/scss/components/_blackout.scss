@@ -1,17 +1,16 @@
-body.is-blackout {
-  .blackout {
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    z-index: 99;
-    background: rgba(0, 0, 0, .4);
-  }
-}
-
 .blackout {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
+  background: rgba(#000, .7);
   transition: 200ms;
+  z-index: -1;
+  visibility: hidden;
+  opacity: 0;
+  cursor: default;
 }
 
 body.is-lock {
