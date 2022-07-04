@@ -2,39 +2,41 @@
     .processing__wrapper
         .processing__ordering
             .processing__contacts
-                h3.processing__title КОНТАКТНАЯ ИНФОРМАЦИЯ:
-                input(type="email" placeholder="Электронный адрес (еmail) *").
+                h3.processing__title--contact КОНТАКТНАЯ ИНФОРМАЦИЯ:
+                input(type="email" placeholder="Электронный адрес (еmail) *")
                 .processing-package
                     label.field-checkbox
                         input(type="checkbox")
                         p Получать новости и специальные предложения
                 .processing__contact
-                    input(type="text" placeholder="Имя *" required)
-                    input(type="text" placeholder="Город *" required)
-                    input(type="text" placeholder="Фамилия *" required)
-                    input(type="phone" placeholder="Мобильный телефон *" required)
+                    div
+                        input(type="text" placeholder="Имя *" required)
+                        input(type="text" placeholder="Город *" required)
+                    div
+                        input(type="text" placeholder="Фамилия *" required)
+                        input(type="phone" placeholder="Мобильный телефон *" required)
             .processing__delivery
-                h3.processing__title Доставка:
-                    label.field-radio
-                        input(type="radio" name="delivery" value="1")
-                        p Пункт выдачи СДЭК (Выбрать пункт выдачи)
-                    label.field-radio
-                        input(type="radio" name="delivery" value="2")
-                        p Курьером до двери
-                    label.field-radio
-                        input(type="radio" name="delivery" value="3")
-                        p Самовывоз из магазина (Санкт-Петербург, Набережная канала Грибоедова 99, 2 этаж)
-                    label.field-radio
-                        input(type="radio" name="delivery" value="3")
-                        p Самовывоз из магазина (Москва, Оружейный переулок, 5)
-                    label.field-radio
-                        input(type="radio" name="delivery" value="4")
-                        p Самовывоз из магазина (Москва, Новодмитровская 1, стр. 23 )
+                h3.processing__title--delivery Доставка:
+                label.field-radio
+                    input(type="radio" name="delivery" value="1")
+                    p Пункт выдачи СДЭК (Выбрать пункт выдачи)
+                label.field-radio
+                    input(type="radio" name="delivery" value="2")
+                    p Курьером до двери
+                label.field-radio
+                    input(type="radio" name="delivery" value="3")
+                    p Самовывоз из магазина (Санкт-Петербург, Набережная канала Грибоедова 99, 2 этаж)
+                label.field-radio
+                    input(type="radio" name="delivery" value="3")
+                    p Самовывоз из магазина (Москва, Оружейный переулок, 5)
+                label.field-radio
+                    input(type="radio" name="delivery" value="4")
+                    p Самовывоз из магазина (Москва, Новодмитровская 1, стр. 23 )
             .processing__address
-                h3.processing__title Адрес:
+                h3.processing__title--address Адрес:
                 input(type="text" name="address" placeholder="Улица, дом, квартира *").
             .processing__payment
-                h3.processing__title Способ оплаты:
+                h3.processing__title--payment Способ оплаты:
                 label.field-radio
                     input(type="radio" name="pay" value="1" checked)
                     p Оплата при получении

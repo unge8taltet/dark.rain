@@ -3,4 +3,121 @@
     display: flex;
     justify-content: space-between;
   }
+  &__ordering,&__basket{
+  width: 100%;
+}
+  &__contacts{
+    margin-bottom: 60px;
+  }
+  &__contact{
+    display: flex;
+    gap: 20px;
+  }
+  &__contacts{
+    max-width: 540px;
+    input{
+      opacity: 0.6;
+      border: 1px solid #313131;
+      margin-bottom: 19px;
+    }
+  }
+  &__title--contact{
+    font-family: $font-ledger;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 120%;
+    align-items: center;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #313131;
+    margin-bottom: 50px;
+  }
+
+  &-package{
+    .field-checkbox{
+      display: flex;
+      gap: 15px;
+      margin-bottom: 60px;
+    }
+  }
+  &__delivery{
+    max-width: 400px;
+    margin-bottom: 60px;
+
+  }
+  .field-radio{
+     p{
+
+       font-size: 16px;
+       line-height: 160%;
+       color: #313131;
+     }
+
+   }
+  &__title--delivery{
+    font-family: $font-ledger;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 120%;
+    align-items: center;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #313131;
+    margin-bottom: 45px;
+  }
+
+  &__address{
+    margin-bottom: 60px;
+  }
+  &__title--address{
+    font-family: $font-ledger;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 120%;
+    align-items: center;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #313131;
+    margin-bottom: 50px;
+  }
+  &__payment{
+
+  }
+  &__title--payment{
+    font-family: $font-ledger;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 120%;
+    align-items: center;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #313131;
+    margin-bottom: 45px;
+  }
+}
+.basket{
+  width: 592px;
+  &__options{
+    display: flex;
+    gap: 271px;
+    margin-bottom: 47px;
+  }
+  &__text{
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 191%;
+    color: #313131;
+
+  }
+}
+.basket-item{
+
+  margin-bottom: 50px;
+  &__info{
+    display: flex;
+    justify-content: space-between;
+  }
+  &__attr{
+    display: flex;
+  }
 }
