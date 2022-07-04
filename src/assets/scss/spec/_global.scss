@@ -1,3 +1,9 @@
+body {
+  @include media-down(xs) {
+    padding-top: 65px;
+  }
+}
+
 .title {
   font-family: $font-ledger;
   font-weight: 400;
