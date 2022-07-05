@@ -9,6 +9,14 @@
     margin-bottom: 60px;
   }
 
+  .slider__arrow {
+    top: 40%;
+
+    @include media-down(md) {
+      top: 50%;
+    }
+  }
+
   .container {
     @include media-down(xs) {
       position: relative;
