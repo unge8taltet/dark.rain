@@ -1,12 +1,18 @@
 .banner {
   margin-bottom: 125px;
-  background: url("@public/images/banner.png") no-repeat center;
+  background-repeat: no-repeat;
+  background-position: center;
   padding: 138px 0 135px;
   background-size: cover;
 
   @include media-down(md) {
     padding: 86px 0;
     margin-bottom: 68px;
+  }
+
+  @include media-down(xs) {
+    padding: 51px 0 121px 0;
+    margin-bottom: 60px;
   }
 
   &__title {

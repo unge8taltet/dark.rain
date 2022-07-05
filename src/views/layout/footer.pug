@@ -2,15 +2,15 @@ footer.footer
     .footer__main
         .container.footer__container
             .footer__cells
-                div.footer__cell
+                div.footer__cell.footer__cell--logotype
                     a(href="/")
                         +icon("logo-2")
-                div.footer__cell
+                div.footer__cell.footer__cell--nav
                     nav.footer__nav
                         ul
                             li
                                 a(href="#") Новинки
-                            li.current
+                            li
                                 a(href="#") Все украшения
                             li
                                 a(href="#") Категории
@@ -18,40 +18,42 @@ footer.footer
                                 a(href="#") Сертификаты
                             li
                                 a(href="#") Instashop
-                div.footer__cell
-                    nav.footer__nav
-                        ul
-                            li
-                                a(href="#") О Нас
-                            li
-                                a(href="#") Доставка и оплата
-                            li
-                                a(href="#") Как выбрать размер
-                            li
-                                a(href="#") Оферта
-                            li
-                                a(href="#") Гарантии и возврат
-                            li
-                                a(href="#") Магазины
-                            li
-                                a(href="#") Вакансии
-                div.footer__cell
+                div.footer__cell.footer__cell--nav-buyers
+                    span.has-children.footer__children
+                        span Покупателям
+                        nav.footer__nav.children-el
+                            ul
+                                li
+                                    a(href="#") О Нас
+                                li
+                                    a(href="#") Доставка и оплата
+                                li
+                                    a(href="#") Как выбрать размер
+                                li
+                                    a(href="#") Оферта
+                                li
+                                    a(href="#") Гарантии и возврат
+                                li
+                                    a(href="#") Магазины
+                                li
+                                    a(href="#") Вакансии
+                div.footer__cell.footer__cell--contacts
                     p.footer__title Связаться с нами:
                     a(href="tel:+78126158843").footer__phone +7 (812) 615-88-43
+                div.footer__cell.footer__cell--socials
                     p.footer__title Мы в месенджерах:
-                    div.socials
-                        a(href="/").socials__item
-                            +icon("vk")
-                        a(href="/").socials__item
-                            +icon("instagram")
-                        a(href="/").socials__item
-                            +icon("telegram")
-                        a(href="/").socials__item
-                            +icon("whatsapp")
-
+                        div.socials
+                            a(href="/").socials__item
+                                +icon("vk")
+                            a(href="/").socials__item
+                                +icon("instagram")
+                            a(href="/").socials__item
+                                +icon("telegram")
+                            a(href="/").socials__item
+                                +icon("whatsapp")
     .footer__bottom
         .container.footer__container
-            .footer__cells.footer__cells--center
+            .footer__cells-bottom
                 div
                     p.footer__copyright © 2021. Darkrain.store. Все права защищены
                 div

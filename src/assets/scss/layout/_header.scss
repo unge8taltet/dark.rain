@@ -66,7 +66,7 @@
 
     .icon {
       height: 13px;
-      width: 14px;
+      width: 17px;
     }
 
     @include media-up(lg) {
@@ -239,60 +239,6 @@
               &:after {
                 width: 100%;
                 opacity: 1;
-              }
-            }
-          }
-
-          &.has-children {
-            cursor: pointer;
-            position: relative;
-            padding-left: 21px;
-
-            @include media-down(md) {
-              padding-left: 21px;
-            }
-
-            &:after, &:before {
-              content: '';
-              position: absolute;
-              top: 50%;
-              transform: translate(-50%);
-              left: 0;
-              border-bottom: 1px solid #313131;
-              width: 12px;
-
-              @include media-down(md) {
-                transform: translate(-50%);
-                top: 0.7em;
-                left: 5px;
-              }
-            }
-
-            &:before {
-              transform: translate(-50%) rotate(90deg);
-              transition: 300ms;
-            }
-
-            &--active {
-              &:before {
-                transform: translate(-50%) rotate(0);
-                opacity: 0;
-
-                @include media-down(md) {
-                  opacity: 1;
-                  transform: translate(-50%) rotate(45deg);
-                }
-              }
-
-              &:after {
-                @include media-down(md) {
-                  transform: translate(-50%) rotate(-45deg);
-                }
-              }
-
-              & > ul {
-                opacity: 1;
-                visibility: visible;
               }
             }
           }
@@ -615,6 +561,53 @@
       @include media-down(xs) {
         width: calc(100% - 30px);
       }
+    }
+  }
+}
+
+
+.has-children {
+  cursor: pointer;
+  position: relative;
+  padding-left: 21px;
+
+  span {
+    &:after, &:before {
+      position: absolute;
+      transition: 300ms;
+      display: block;
+      content: '';
+      left: 0;
+      top: 10px;
+      border-bottom: 1px solid #313131;
+      width: 12px;
+    }
+    &:before {
+      transform: rotate(90deg);
+    }
+  }
+
+  &--active {
+    span {
+      &:before {
+        transform: rotate(0);
+        opacity: 0;
+
+        @include media-down(md) {
+          opacity: 1;
+          transform: rotate(45deg);
+        }
+      }
+      &:after {
+        @include media-down(md) {
+          transform: rotate(-45deg);
+        }
+      }
+    }
+
+    & > ul {
+      opacity: 1 !important;
+      visibility: visible !important;
     }
   }
 }

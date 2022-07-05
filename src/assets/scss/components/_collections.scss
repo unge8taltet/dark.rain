@@ -3,6 +3,17 @@
   grid-template-columns: 1fr 1fr;
   max-width: 1600px;
   margin: 0 auto 125px;
+  grid-template-areas: "first second" "third fourth";
+
+  @include media-down(md) {
+    margin-bottom: 68px;
+  }
+
+  @include media-down(xs) {
+    margin-bottom: 60px;
+    grid-template-columns: 1fr;
+    grid-template-areas: "first" "second" "fourth" "third";
+  }
 }
 
 .collection {
@@ -12,33 +23,76 @@
   max-height: 800px;
   height: 50vw;
 
+  @include media-down(md) {
+    max-height: 384px;
+  }
+
+  @include media-down(xs) {
+    max-height: none;
+    min-height: 320px;
+    max-width: 360px;
+    margin: 0 auto;
+  }
+
   &--first {
+    grid-area: first;
+
     #{$root}__image {
       width: 50%;
       height: 60%;
       border-radius: 0 178px;
       margin-top: 15%;
       margin-left: 25%;
+
+      @include media-down(md) {
+        border-radius: 0 70px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 189px;
+        height: 204px;
+      }
+
+      @include media-down(xs) {
+        margin-top: 25px;
+      }
     }
 
     #{$root}__wrapper {
       bottom: 10%;
       left: 25%;
+
+      @include media-down(md) {
+        width: 100%;
+        left: 0;
+      }
+
+      @include media-down(xs) {
+        bottom: 25px;
+      }
     }
   }
 
   &--second {
-    #{$root}__image {
-
-    }
+    grid-area: second;
 
     #{$root}__wrapper {
       bottom: 10%;
       left: 5%;
+
+      @include media-down(md) {
+        width: 100%;
+        left: 0;
+      }
+
+      @include media-down(xs) {
+        bottom: 25px;
+      }
     }
   }
 
   &--third {
+    grid-area: third;
+
     #{$root}__image {
       object-position: top center;
     }
@@ -46,10 +100,24 @@
     #{$root}__wrapper {
       bottom: 8%;
       left: 20%;
+
+      @include media-down(md) {
+        width: 100%;
+        left: 0;
+      }
+
+      @include media-down(xs) {
+        bottom: 25px;
+      }
     }
   }
 
   &--fourth {
+    grid-area: fourth;
+    @include media-down(xs) {
+      height: 340px;
+    }
+
     #{$root}__image {
       border-radius: 178px 0;
       transform: matrix(-1, 0, 0, 1, 0, 0);
@@ -58,11 +126,33 @@
       margin-left: 25%;
       margin-top: 101px;
       object-position: left center;
+
+      @include media-down(md) {
+        margin-top: 47px;
+        border-radius: 0 70px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 189px;
+        height: 204px;
+      }
+
+      @include media-down(xs) {
+        margin-top: 25px;
+      }
     }
 
     #{$root}__wrapper {
       bottom: 8%;
       left: 25%;
+
+      @include media-down(md) {
+        width: 100%;
+        left: 0;
+      }
+
+      @include media-down(xs) {
+        bottom: 25px;
+      }
     }
   }
 
@@ -88,6 +178,14 @@
     text-transform: uppercase;
     color: #313131;
     margin-bottom: 30px;
+
+    @include media-down(md) {
+      width: 100%;
+      font-size: 16px;
+      text-align: center;
+      max-width: 207px;
+      margin: 0 auto 10px auto;
+    }
   }
 
   &__link {
@@ -97,5 +195,11 @@
     color: #313131;
     font-weight: 500;
     text-decoration: underline;
+
+    @include media-down(md) {
+      width: 100%;
+      font-size: 12px;
+      text-align: center;
+    }
   }
 }

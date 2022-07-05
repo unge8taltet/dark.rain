@@ -1,26 +1,94 @@
 .fitting {
   margin-bottom: 130px;
 
+  @include media-down(md) {
+    margin-bottom: 70px;
+  }
+
+  @include media-down(xs) {
+    margin-bottom: 60px;
+  }
+
   &__image {
     margin-top: -66px;
     margin-right: 81px;
+
+    @include media-down(md) {
+      margin-top: 0;
+      margin-right: 40px;
+    }
+
+    @include media-down(xs) {
+      margin-right: 0;
+
+      img {
+        width: 145px;
+      }
+    }
+  }
+
+  &__title {
+    @include media-down(xs) {
+      margin-right: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      font-size: 16px;
+      line-height: 160%;
+    }
   }
 
   &__wrapper {
     display: flex;
 
+    @include media-down(xs) {
+      flex-direction: column;
+      position: relative;
+      padding-top: 70px;
+    }
+
     & > div {
       width: 100%;
+
+      &:first-child {
+        @include media-down(md) {
+          max-width: 325px;
+        }
+
+        @include media-down(xs) {
+          max-width: 100%;
+        }
+      }
     }
   }
 
-  &__contnet {
+  &__content {
     max-width: 422px;
+
+    @include media-down(md) {
+      max-width: 329px;
+      width: 100%;
+    }
+
+    @include media-down(xs) {
+      max-width: 100%;
+    }
   }
 
   &__text {
     margin-bottom: 60px;
     margin-top: 30px;
+
+    @include media-down(md) {
+      margin-bottom: 40px;
+    }
+
+    @include media-down(xs) {
+      margin-top: 20px;
+      margin-bottom: 30px;
+      font-size: 14px;
+    }
   }
 
   &__image-2 {
@@ -30,6 +98,25 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;
+
+    @include media-down(md) {
+      margin-top: 76px;
+      width: 205px;
+      height: 202px;
+      float: right;
+      margin-right: 27px;
+    }
+
+    @include media-down(xs) {
+      position: absolute;
+      top: 8px;
+      left: 85px;
+      margin-right: 0;
+
+      img {
+        width: 135px;
+      }
+    }
   }
 
   &__link {

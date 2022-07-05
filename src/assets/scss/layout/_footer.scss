@@ -1,4 +1,24 @@
 .footer {
+
+  &__children {
+    @include media-up(sm) {
+      padding-left: 0;
+
+      &:after, &:before {
+        content: none;
+      }
+      & > span {
+        display: none;
+      }
+    }
+
+    & > span {
+      font-size: 14px;
+      line-height: 150%;
+      color: #313131;
+    }
+  }
+
   &__main {
     border-top: 1px solid rgba(#000000, .1);
     padding-top: 54px;
@@ -9,6 +29,11 @@
     border-top: 1px solid rgba(#000000, .1);
     padding-top: 35px;
     padding-bottom: 48px;
+
+    @include media-down(xs) {
+      border-top: none;
+      padding: 0;
+    }
   }
 
   &__phone {
@@ -17,34 +42,139 @@
     color: #313131;
     font-weight: 500;
     margin-top: 17px;
-    margin-bottom: 26px;
+
+    transition: 300ms;
+
+    &:hover {
+      opacity: .6;
+    }
   }
 
   &__cells {
+    display: grid;
+    justify-content: space-between;
+    grid-gap: 30px;
+
+    grid-template-areas: "logotype nav nav-buyers contacts" "logotype nav nav-buyers socials";
+
+    @include media-down(md) {
+      grid-template-areas: "logotype nav nav-buyers" "logotype contacts socials";
+      grid-gap: 50px 20px;
+    }
+
+    @include media-down(xs) {
+      grid-template-areas: "logotype logotype" "nav nav" "nav-buyers nav-buyers" "contacts contacts" "socials socials";
+      grid-gap: 30px;
+    }
+  }
+
+  &__cells-bottom {
     display: flex;
     justify-content: space-between;
     gap: 30px;
+    align-items: center;
 
-    &--center {
-      align-items: center;
+    @include media-down(xs) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 60px;
+      padding-bottom: 92px;
+
+      & > div {
+        width: 100%;
+      }
     }
   }
 
   &__cell {
     &:last-child {
       margin-right: 131px;
+
+      @include media-down(md) {
+        margin-right: 75px;
+      }
+
+      @include media-down(sm) {
+        margin-right: 0;
+      }
+    }
+
+
+    &--logotype {
+      grid-area: logotype;
+    }
+
+    &--nav {
+      grid-area: nav;
+    }
+
+    &--nav-buyers {
+      grid-area: nav-buyers;
+
+      @include media-down(xs) {
+        margin-top: -30px;
+        border-bottom: 1px solid rgba(#000000, .1);
+      }
+    }
+
+    &--contacts {
+      grid-area: contacts;
+    }
+
+    &--socials {
+      grid-area: socials;
+      margin-top: -50px;
+
+      @include media-down(md) {
+        margin-top: 0;
+      }
     }
   }
 
   &__nav {
+
+    &.children-el {
+      @include media-up(sm) {
+        & > ul {
+          height: auto !important;
+        }
+      }
+
+      @include media-down(xs) {
+        & > ul {
+          transition: 300ms;
+          overflow: hidden;
+          height: 0;
+          margin-left: 1.2em;
+          gap: 0;
+
+          & > li {
+            border: none;
+            margin-bottom: 10px;
+            padding: 0;
+
+            &:first-child {
+              margin-top: 20px;
+            }
+          }
+        }
+      }
+    }
+
     & > ul {
       margin: 0;
       padding: 0;
       display: flex;
       flex-direction: column;
-      gap: 10px;
+      gap: 15px;
 
       & > li {
+
+        @include media-down(xs) {
+          padding-bottom: 15px;
+          border-bottom: 1px solid rgba(#000000, .1);
+        }
+
         &.current {
           a {
             font-weight: 700;
@@ -57,15 +187,27 @@
         line-height: 150%;
         color: #313131;
 
+        &:hover {
+          font-weight: 700;
+        }
+
         &.current {
           font-weight: 700;
         }
       }
     }
+
+    @include media-down(xs) {
+      margin-bottom: 20px;
+    }
   }
 
   &__container {
     max-width: 1160+60px;
+
+    @include media-down(xs) {
+      max-width: 390px;
+    }
   }
 
   &__title {
@@ -77,6 +219,21 @@
     font-size: 14px;
     line-height: 150%;
     color: #A2A2A2;
+
+    @include media-down(xs) {
+      position: relative;
+
+      &:after {
+        content: '';
+        border-bottom: 1px solid rgba(#000000, .1);
+        width: calc(100% + 30px);
+        height: 1px;
+        position: absolute;
+        bottom: -30px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
   }
 
   &__made {
@@ -99,6 +256,10 @@
   margin-top: 16px;
 
   &__item {
+    transition: 300ms;
 
+    &:hover {
+      opacity: .6;
+    }
   }
 }

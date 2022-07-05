@@ -1,13 +1,20 @@
 .bestsellers
     .container
-        h2.title ХИТЫ ПРОДАЖ
+        h2.title.bestsellers__title ХИТЫ ПРОДАЖ
+            a(href="#").bestsellers__link В КАТАЛОГ
+                +icon("new")
         .slider
             .swiper.bestsellers__swiper
                 .swiper-wrapper
                     .swiper-slide.product
                         a(href="#").product__link
                         .product__header
-                            img(src=require("../../public/images/bestsellers-1.jpg") alt="").product__image
+                            .product__swiper.swiper
+                                .swiper-wrapper
+                                    .product__slide.swiper-slide
+                                        a(href="#").product__slide-link
+                                        img(src=require("../../public/images/bestsellers-1.jpg") alt="").product__image
+                                .swiper-pagination.product-pagination
                             .product__badges
                                 span.product__badge -30%
                                 button.product__like.product__like--active

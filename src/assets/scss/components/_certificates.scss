@@ -1,9 +1,28 @@
 .certificates {
   background-color: #F3F3F3;
+  background-image: url("@images/sertificates-bg.png");
+  background-size: cover;
+  background-position: center;
   margin-bottom: 100px;
+  min-height: 734px;
+  display: flex;
+  align-items: center;
+
+  @include media-down(md) {
+    margin-bottom: 60px;
+    min-height: 434px;
+  }
+
+  @include media-down(xs) {
+    padding: 30px 0;
+  }
 
   &__container {
     max-width: 1058px + 60px;
+
+    @include media-down(xs) {
+      max-width: 390px;
+    }
   }
 
   &__title {
@@ -21,19 +40,44 @@
         float: right;
       }
     }
+
+    @include media-down(md) {
+      font-size: 30px;
+      line-height: 160%;
+    }
+
+    @include media-down(xs) {
+      font-size: 22px;
+    }
   }
 
   &__wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 100px;
-    margin-bottom: 100px;
+    gap: 30px;
+
+    @include media-down(xs) {
+      position: relative;
+      flex-direction: column;
+      gap: 20px;
+      padding-bottom: 50px;
+    }
+
+    & > div {
+      @include media-down(xs) {
+        width: 100%;
+      }
+    }
   }
 
   &__content {
     max-width: 555px;
     width: 100%;
+
+    @include media-down(md) {
+      max-width: 361px;
+    }
   }
 
   &__link {
@@ -45,6 +89,16 @@
     text-transform: uppercase;
     color: #313131;
     margin-top: 60px;
+
+    @include media-down(md) {
+      margin-top: 52px;
+    }
+
+    @include media-down(xs) {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
 
     .icon {
       margin-left: 20px;
@@ -59,5 +113,15 @@
     width: 388px;
     object-fit: cover;
     height: 534px;
+
+    @include media-down(md) {
+      border-radius: 0 100px;
+      width: 228px;
+      height: 286px;
+    }
+
+    @include media-down(xs) {
+      margin-left: auto;
+    }
   }
 }

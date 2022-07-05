@@ -1,8 +1,46 @@
 .inspiration {
   margin-bottom: 268px;
 
+  @include media-down(md) {
+    margin-bottom: 70px;
+  }
+
+  @include media-down(xs) {
+    margin-bottom: 60px;
+  }
+
   &__title {
     margin-bottom: 0;
+  }
+
+  .swiper-slide {
+    width: 298px;
+    height: 301px;
+    overflow: hidden;
+
+    @include media-down(md) {
+      width: 248px;
+      height: 250px;
+    }
+
+    img {
+      transition: 300ms;
+    }
+
+    &:hover {
+      img {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+
+
+  .container {
+    @include media-down(xs) {
+      position: relative;
+      padding-bottom: 40px;
+    }
   }
 
   &__wrapper {
@@ -11,6 +49,15 @@
     justify-content: space-between;
     align-items: center;
     margin-top: 20px;
+
+    @include media-down(md) {
+      margin-bottom: 20px;
+    }
+
+    @include media-down(xs) {
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
 
     .icon {
       margin-left: 29px;
@@ -34,5 +81,11 @@
     letter-spacing: 0.01em;
     text-transform: uppercase;
     color: #313131;
+
+    @include media-down(xs) {
+      position: absolute;
+      bottom: 0;
+      left: 15px;
+    }
   }
 }

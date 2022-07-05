@@ -4,9 +4,19 @@
   padding: 0 31px;
   font-weight: normal;
   font-size: 14px;
+  transition: 300ms;
 
   &::placeholder {
     color: #747474;
+    opacity: 1;
+  }
+
+  &:focus {
+    border-color: #000;
+  }
+
+  @include media-down(md) {
+    padding: 0 17px;
   }
 }
 

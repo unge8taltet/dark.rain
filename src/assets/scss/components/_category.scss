@@ -4,6 +4,10 @@
   @include media-down(md) {
     margin-bottom: 47px;
   }
+
+  @include media-down(xs) {
+    margin-bottom: 60px;
+  }
 }
 
 .slider {
@@ -41,6 +45,11 @@
 
 .category-item {
   position: relative;
+  width: 407px;
+
+  @include media-down(md) {
+    width: 273px;
+  }
 
   &__link {
     position: absolute;
@@ -48,10 +57,27 @@
     left: 0;
     right: 0;
     bottom: 0;
+    z-index: 1;
   }
 
   &__image {
     max-width: 100%;
+    height: 544px;
+    overflow: hidden;
+
+    @include media-down(md) {
+      height: 365px;
+    }
+
+    img {
+      transition: 300ms;
+    }
+  }
+
+  &:hover {
+    .category-item__image img {
+      transform: scale(1.1);
+    }
   }
 
   &__title {
