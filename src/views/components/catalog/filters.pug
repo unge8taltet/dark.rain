@@ -1,11 +1,180 @@
-.filters
-    .container
-        .filers__wrapper
-            div.filters__sort
-                p.filters__sort Сортировать
-            div.filters__filter
-                div
-                    p Сбросить фильтры
+#filters
+    .filters
+        .container
+            .filters__wrapper
+                div.filters__sect
+                    .layout
+                        button.layout__item#layout-grid
+                            +icon("lauout-1")
+                        button.layout__item.layout__item--active#layout-list
+                            +icon("lauout-2")
+                    .sort
+                        p.sort__title
+                            span Сортировать
+                            +icon("next")
+                        ul.sort__list
+                            li
+                                a(href="") Сначала дешевле
+                            li
+                                a(href="") Сначала дороже
+                            li
+                                a(href="") Хиты продаж
+                div.filters__filter
+                    a(href="#").filters__clear.filter-clear
+                        span Сбросить фильтры
+                        +icon("close")
+                    button(data-dialog="#filter-dialog").filters__open.dialog-open
+                        span Фильтр
+                        +icon("next")
 
-                div
-                    p Фильтр
+.dialog.dialog--right.dialog-filter#filter-dialog
+    .dialog__blackout.blackout.dialog-close(data-dialog="#filter-dialog")
+    .dialog__main
+        .dialog__header
+            .dialog__container
+                .dialog__title Фильтр
+                    button(data-dialog="#filter-dialog").dialog__close.dialog-close
+                        +icon("close")
+        .dialog__scrollbar
+            .dialog__container
+                .dialog__wrapper
+                    .dialog__section
+                        p.dialog__caption.dialog__caption--mb30 Цена
+                        .dialog-filter__section-prices
+                            .field-range.dialog-filter__slide-price
+                            .field-range-value
+                            .dialog-filter__prices
+                                label.field-price
+                                    span.field-price__start От:
+                                    .field-price__input
+                                        input(type="text" name="priceFrom" value="0").dialog-filter__value-filter#price-from
+                                        span.field-price__end Руб
+                                label.field-price
+                                    span.field-price__start До:
+                                    .field-price__input
+                                        input(type="text" name="priceTo" value="0").dialog-filter__value-filter#price-to
+                                        span.field-price__end Руб
+                    .dialog__section
+                        p.dialog__caption.dialog__caption--mb30 Категория
+                        .dialog-filter__section-categories
+                            label.field-checkbox-button
+                                input(type="checkbox" name="categories" value="Кольца").dialog-filter__array-filter
+                                span Кольца
+                            label.field-checkbox-button
+                                input(type="checkbox" name="categories" value="Серьги").dialog-filter__array-filter
+                                span Серьги
+                            label.field-checkbox-button
+                                input(type="checkbox" name="categories" value="Браслеты").dialog-filter__array-filter
+                                span Браслеты
+                            label.field-checkbox-button
+                                input(type="checkbox" name="categories" value="Колье").dialog-filter__array-filter
+                                span Колье
+                            label.field-checkbox-button
+                                input(type="checkbox" name="categories" value="Каффы и клаймберы").dialog-filter__array-filter
+                                span Каффы и клаймберы
+                            label.field-checkbox-button
+                                input(type="checkbox" name="categories" value="Браслет").dialog-filter__array-filter
+                                span Браслеты
+                    .dialog__section
+                        label.field-checkbox-circle
+                            input(type="checkbox" name="availability" value="В наличии").dialog-filter__toggle-filter
+                            span В наличии
+                    .dialog__section
+                        p.dialog__caption Размер
+                        .dialog-filter__section-sizes
+                            label.field-checkbox-button
+                                input(type="checkbox" name="size" value="13").dialog-filter__array-filter
+                                span 13
+                            label.field-checkbox-button
+                                input(type="checkbox" name="size" value="13,5").dialog-filter__array-filter
+                                span 13,5
+                            label.field-checkbox-button
+                                input(type="checkbox" name="size" value="14").dialog-filter__array-filter
+                                span 14
+                            label.field-checkbox-button
+                                input(type="checkbox" name="size" value="14,5").dialog-filter__array-filter
+                                span 14,5
+                            label.field-checkbox-button
+                                input(type="checkbox" name="size" value="15").dialog-filter__array-filter
+                                span 15
+                            label.field-checkbox-button
+                                input(type="checkbox" name="size" value="15,5").dialog-filter__array-filter
+                                span 15,5
+                            label.field-checkbox-button
+                                input(type="checkbox" name="size" value="16").dialog-filter__array-filter
+                                span 16
+                            label.field-checkbox-button
+                                input(type="checkbox" name="size" value="16,5").dialog-filter__array-filter
+                                span 16,5
+                            label.field-checkbox-button
+                                input(type="checkbox" name="size" value="17").dialog-filter__array-filter
+                                span 17
+                            label.field-checkbox-button
+                                input(type="checkbox" name="size" value="17,5").dialog-filter__array-filter
+                                span 17,5
+                            label.field-checkbox-button
+                                input(type="checkbox" name="size" value="18").dialog-filter__array-filter
+                                span 18
+                            label.field-checkbox-button
+                                input(type="checkbox" name="size" value="18,5").dialog-filter__array-filter
+                                span 18,5
+                            label.field-checkbox-button
+                                input(type="checkbox" name="size" value="19").dialog-filter__array-filter
+                                span 19
+                            label.field-checkbox-button
+                                input(type="checkbox" name="size" value="19,5").dialog-filter__array-filter
+                                span 19,5
+                    .dialog__section
+                        p.dialog__caption Материал
+                        .dialog-filter__section-list
+                            label.field-checkbox-button
+                                input(type="checkbox" name="material" value="Серебро").dialog-filter__array-filter
+                                span Серебро
+                            label.field-checkbox-button
+                                input(type="checkbox" name="material" value="Цитрин").dialog-filter__array-filter
+                                span Цитрин
+                            label.field-checkbox-button
+                                input(type="checkbox" name="material" value="Агат").dialog-filter__array-filter
+                                span Агат
+                            label.field-checkbox-button
+                                input(type="checkbox" name="material" value="Хромдиопсид").dialog-filter__array-filter
+                                span Хромдиопсид
+                            label.field-checkbox-button
+                                input(type="checkbox" name="material" value="Фианит").dialog-filter__array-filter
+                                span Фианит
+                    .dialog__section
+                        p.dialog__caption Покрытие
+                        .dialog-filter__section-list
+                            label.field-checkbox-button
+                                input(type="checkbox" name="coating" value="Родий").dialog-filter__array-filter
+                                span Родий
+                            label.field-checkbox-button
+                                input(type="checkbox" name="coating" value="Золото").dialog-filter__array-filter
+                                span Золото
+                    .dialog__section
+                        p.dialog__caption Вставка
+                        .dialog-filter__section-list
+                            label.field-checkbox-button
+                                input(type="checkbox" name="insert" value="Жемчуг (36)").dialog-filter__array-filter
+                                span Жемчуг (36)
+                            label.field-checkbox-button
+                                input(type="checkbox" name="insert" value="Агат (54)").dialog-filter__array-filter
+                                span Агат (54)
+                            label.field-checkbox-button
+                                input(type="checkbox" name="insert" value="Кварц (33)").dialog-filter__array-filter
+                                span Кварц (33)
+                            label.field-checkbox-button
+                                input(type="checkbox" name="insert" value="Сердолик (66)").dialog-filter__array-filter
+                                span Сердолик (66)
+                    .dialog__section
+                        p.dialog__caption Цвет
+                        .dialog-filter__section-list
+                            label.field-checkbox-button
+                                input(type="checkbox" name="color" value="Серебро").dialog-filter__array-filter
+                                span Серебро
+                            label.field-checkbox-button
+                                input(type="checkbox" name="color" value="Золотой").dialog-filter__array-filter
+                                span Золотой
+        .dialog__footer
+            button.dialog-filter__clear.filter-clear Сбросить фильтры
+                +icon("close")

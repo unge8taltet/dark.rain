@@ -246,7 +246,7 @@
           & > ul {
             position: absolute;
             top: 100%;
-            right: -16px;
+            right: -46px;
             background: #FCFCFA;
             margin-top: 16px;
             padding: 30px;
@@ -582,6 +582,7 @@
       border-bottom: 1px solid #313131;
       width: 12px;
     }
+
     &:before {
       transform: rotate(90deg);
     }
@@ -598,6 +599,7 @@
           transform: rotate(45deg);
         }
       }
+
       &:after {
         @include media-down(md) {
           transform: rotate(-45deg);

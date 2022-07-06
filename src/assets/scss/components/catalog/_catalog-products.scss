@@ -1,0 +1,167 @@
+.catalog-products {
+  margin-bottom: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px 14px;
+
+  .product {
+    width: calc((100% / 3) - 9.5px);
+
+    @include media-down(md) {
+      width: calc((100% / 3) - 7.5px);
+    }
+
+    @include media-down(xs) {
+      width: 100%;
+    }
+
+    &__badges {
+      padding: 20px;
+      gap: 30px;
+
+      @include media-down(md) {
+        gap: 10px;
+        padding: 10px;
+      }
+    }
+
+    &__main {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+      gap: 0 15px;
+      margin-top: 10px;
+      padding-bottom: 50px;
+
+      @include media-down(md) {
+        padding-bottom: 20px;
+      }
+    }
+
+    &__info {
+      flex-direction: column;
+      align-items: flex-start;
+      margin-top: 0;
+    }
+
+    &__title {
+      font-size: 16px;
+      line-height: 188%;
+
+      @include media-down(md) {
+        font-size: 14px;
+        line-height: 214%;
+      }
+    }
+
+    &__prices {
+      position: absolute;
+      bottom: 30px;
+      left: 0;
+
+      @include media-down(md) {
+        bottom: 0;
+      }
+    }
+
+    &__category {
+      font-size: 16px;
+      line-height: 188%;
+
+      @include media-down(md) {
+        font-size: 14px;
+        line-height: 214%;
+      }
+    }
+
+    &__footer {
+      margin-top: 0;
+      position: absolute;
+      bottom: 0;
+    }
+
+    .swiper-slide {
+      height: 418px;
+
+      @include media-down(md) {
+        height: 288px;
+      }
+
+      @include media-down(xs) {
+        height: 312px;
+      }
+    }
+
+    .product-pagination {
+      @include media-down(xs) {
+        padding: 0;
+      }
+    }
+
+    &__like {
+      @include media-down(xs) {
+        bottom: auto;
+        top: 10px;
+        display: none;
+      }
+    }
+
+
+    &__cart {
+      & > span {
+        display: inline;
+      }
+    }
+  }
+
+  @include media-down(md) {
+    margin-bottom: 60px;
+    gap: 50px 10px;
+  }
+
+  @include media-down(xs) {
+    margin-bottom: 60px;
+    gap: 40px 10px;
+
+    &--grid {
+      .product {
+        width: calc(50% - 5px);
+
+        &__main {
+          flex-direction: column;
+          align-items: flex-start;
+          padding-bottom: 20px;
+          margin-top: 15px;
+        }
+
+        &__title, &__category {
+          line-height: 125%;
+        }
+
+        &__title {
+          margin-bottom: 5px;
+        }
+
+        &__prices {
+          bottom: -10px;
+        }
+
+        &__price {
+          font-size: 16px;
+
+          span {
+            font-size: 14px;
+          }
+        }
+
+        .swiper-slide {
+          height: 155px;
+        }
+
+        &__badge {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}

@@ -1,3 +1,5 @@
 // FIXES
 import "./fixes"
-import './routes/common';
+import './app/common';
+import './app/dialog';
+import './app/filters';

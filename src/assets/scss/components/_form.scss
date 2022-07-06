@@ -37,3 +37,138 @@
     width: auto;
   }
 }
+
+
+.field-range {
+  &-value {
+    user-select: none;
+    pointer-events: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 12px;
+    font-size: 12px;
+    line-height: 130%;
+    color: #5B5752;
+  }
+}
+
+.field-price {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 13px;
+
+  &__start {
+    font-size: 12px;
+    line-height: 130%;
+    color: #313131;
+    opacity: 0.6;
+    user-select: none;
+  }
+
+  &__end {
+    font-size: 12px;
+    line-height: 130%;
+    color: #313131;
+    user-select: none;
+  }
+
+  &__input {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 13px;
+    height: 30px;
+    border: 1px solid rgba(#313131, 0.2);
+    border-radius: 3px;
+    padding: 0 10px 0 12px;
+
+    & > input {
+      width: 100%;
+      height: 100%;
+      background: none;
+    }
+  }
+}
+
+.field-checkbox-button {
+  input {
+    display: none;
+
+    &:checked + span {
+      background-color: #EDEDED;
+    }
+  }
+
+  span {
+    user-select: none;
+    cursor: pointer;
+    display: inline-table;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    color: #313131;
+    transition: background-color .3s;
+
+    padding: 10px 20px;
+    border: 0.5px solid rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+  }
+}
+
+
+.field-checkbox-circle {
+  display: inline-table;
+
+  input {
+    display: none;
+
+    &:checked + span {
+      &:after {
+        transform: translateY(-50%) scale(1);
+        opacity: 1;
+      }
+    }
+  }
+
+  span {
+    user-select: none;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 150%;
+    color: #313131;
+    cursor: pointer;
+
+    &:before {
+      content: '';
+      border: 1px solid #313131;
+      border-radius: 88px;
+      width: 18px;
+      height: 18px;
+      min-width: 18px;
+      min-height: 18px;
+      display: table;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      left: 4px;
+      top: 50%;
+      transform: translateY(-50%) scale(0);
+      background-color: #313131;
+      border-radius: 88px;
+
+      width: 10px;
+      height: 10px;
+      opacity: 0;
+      transition: 300ms;
+    }
+  }
+}

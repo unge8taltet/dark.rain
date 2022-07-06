@@ -17,8 +17,9 @@
                     img(src=require("../../public/images/bestsellers-1.jpg") alt="").product__image
             .swiper-pagination.product-pagination
         .product__badges
-            button.product__like
-                +icon("heart")
+
+        button.product__like
+            +icon("heart")
     .product__main
         .product__info
             h3.product__title COHOE
@@ -29,5 +30,6 @@
     .product__footer
         button.product__cart
             +icon("cart")
-            | В корзину
+            span добавить
+            |  в корзину
         button.product__pay Купить в 1 клик

@@ -1,8 +1,11 @@
 import Swiper, {Navigation, Pagination} from "swiper";
 
+
 window.addEventListener('DOMContentLoaded', () => {
+
     const searchHeader = document.querySelector('.header__search-form')
     const headerMenu = document.querySelector('.header-menu')
+
 
     if (searchHeader) {
         const searchOpen = document.querySelectorAll('.search-open')
@@ -40,7 +43,7 @@ window.addEventListener('DOMContentLoaded', () => {
             if (menuEl) {
                 menuEl.style.height = menuEl.scrollHeight + "px"
             }
-            if(menuEl2) {
+            if (menuEl2) {
                 menuEl2.style.height = menuEl.scrollHeight + "px"
             }
             el.classList.add('has-children--active')
@@ -50,7 +53,7 @@ window.addEventListener('DOMContentLoaded', () => {
             if (menuEl) {
                 menuEl.style.height = "0"
             }
-            if(menuEl2) {
+            if (menuEl2) {
                 menuEl2.style.height = "0"
             }
             el.classList.remove('has-children--active')
@@ -160,7 +163,6 @@ window.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-
     new Swiper('.product__swiper', {
         spaceBetween: 20,
         nested: true,
@@ -169,6 +171,19 @@ window.addEventListener('DOMContentLoaded', () => {
         modules: [Pagination],
         pagination: {
             el: ".product-pagination"
+        }
+    });
+
+    new Swiper('.catalog-categories', {
+        spaceBetween: 10,
+        slidesPerView: "auto",
+        freeMode: {
+            enabled: true
+        },
+        breakpoints: {
+            992: {
+                cssMode: true,
+            }
         }
     });
 })

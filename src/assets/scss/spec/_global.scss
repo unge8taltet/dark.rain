@@ -1,4 +1,6 @@
 body {
+  background: #FCFCFA;
+
   @include media-down(xs) {
     padding-top: 65px;
   }
@@ -35,4 +37,14 @@ body {
   text-transform: uppercase;
   text-align: center;
   margin-bottom: 50px;
+
+  @include media-down(md) {
+    font-size: 40px;
+    line-height: 123.8%;
+    margin-bottom: 40px;
+  }
+
+  @include media-down(xs) {
+    margin-bottom: 29px;
+  }
 }

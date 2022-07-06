@@ -1,0 +1,58 @@
+.pagination {
+  display: flex;
+  margin: 0 auto;
+  align-items: center;
+  flex-direction: column;
+  max-width: 300px;
+  width: 100%;
+
+  @include media-down(md) {
+    max-width: 320px;
+  }
+
+  @include media-down(xs) {
+    max-width: 300px;
+  }
+
+  &__text {
+    font-size: 16px;
+    line-height: 94%;
+    font-weight: 500;
+    color: #313131;
+    margin-bottom: 16px;
+  }
+
+  &__progress {
+    width: 100%;
+    background-color: rgba(#000000, 0.1);
+    height: 2px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+
+    @include media-down(md) {
+      max-width: 300px;
+      margin-bottom: 20px;
+    }
+
+    & > span {
+      display: block;
+      background: #313131;
+      height: 2px;
+    }
+  }
+
+  &__btn {
+    width: 100%;
+  }
+}
+
+.catalog {
+  .pagination {
+    margin-bottom: 130px;
+
+    @include media-down(md) {
+      margin-bottom: 60px;
+    }
+  }
+}

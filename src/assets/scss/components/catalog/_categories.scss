@@ -1,11 +1,34 @@
 .catalog-categories {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 78px;
   margin-bottom: 51px;
 
+  @include media-down(md) {
+    margin-bottom: 42px;
+  }
+
+  @include media-down(xs) {
+    margin-bottom: 30px;
+  }
+
+  .swiper-wrapper {
+    @include media-up(sm) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 78px;
+
+      @include media-down(md) {
+        gap: 30px;
+      }
+
+      @include media-down(sm) {
+        gap: 10px;
+      }
+    }
+  }
+
   a {
+    user-select: none;
+    width: auto;
     font-size: 22px;
     line-height: 100%;
     font-weight: 500;
@@ -14,9 +37,24 @@
     color: #313131;
     opacity: 0.3;
 
-    &.current {
+    @include media-down(xs) {
+      background: #FCFCFA;
+      border: 0.5px solid rgba(0, 0, 0, 0.2);
+      border-radius: 69px;
+      padding: 10px 20px;
       opacity: 1;
     }
 
+    @include media-down(md) {
+      font-size: 16px;
+    }
+
+    &.current {
+      opacity: 1;
+
+      @include media-down(xs) {
+        background: #EDEDED;
+      }
+    }
   }
 }
