@@ -42,7 +42,7 @@
   }
 
   &__badges {
-    width: calc(100% - 60px);
+    width: calc(100% - 40px);
     position: absolute;
     top: 0;
     left: 0;
@@ -75,8 +75,8 @@
     align-items: center;
     justify-content: center;
     position: absolute;
-    top: 20px;
-    right: 20px;
+    top: 15px;
+    right: 15px;
     z-index: 10;
 
     @include media-down(md) {
