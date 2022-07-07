@@ -252,16 +252,27 @@
     flex-direction: column;
     justify-content: space-between;
     transition: 300ms;
+
+    @include media-down(md) {
+      max-width: 360px;
+      padding: 25px 0 0 0;
+    }
   }
-
-
 
   &__container {
     padding: 0 50px;
+
+    @include media-down(md) {
+      padding: 0 40px 0 30px;
+    }
   }
 
   &__header {
     margin-bottom: 53px;
+
+    @include media-down(md) {
+      margin-bottom: 46px;
+    }
   }
 
   &__title {
@@ -274,6 +285,11 @@
     letter-spacing: 0.02em;
     text-transform: uppercase;
     color: #313131;
+
+    @include media-down(md) {
+      font-size: 14px;
+      line-height: 150%;
+    }
   }
 
   &__close {
@@ -283,6 +299,11 @@
     .icon {
       width: 17px;
       height: 17px;
+
+      @include media-down(md) {
+        width: 10px;
+        height: 10px;
+      }
     }
   }
 
@@ -299,6 +320,10 @@
   &__section {
     &:not(:last-child) {
       margin-bottom: 60px;
+
+      @include media-down(md) {
+        margin-bottom: 50px;
+      }
     }
   }
 
@@ -313,8 +338,18 @@
     color: #313131;
     margin-bottom: 20px;
 
+    @include media-down(md) {
+      margin-bottom: 10px;
+      font-size: 16px;
+      line-height: 150%;
+    }
+
     &--mb30 {
       margin-bottom: 30px;
+
+      @include media-down(md) {
+        margin-bottom: 20px;
+      }
     }
   }
 
