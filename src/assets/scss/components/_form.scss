@@ -173,3 +173,52 @@
     }
   }
 }
+
+
+.field-checkbox-box {
+  cursor: pointer;
+
+  input {
+    display: none;
+
+    &:checked + span {
+      &:after {
+        transform: translateY(-50%) scale(1);
+        opacity: 1;
+      }
+    }
+  }
+
+
+  span {
+    user-select: none;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    &:before {
+      content: '';
+      border: 1px solid #313131;
+      width: 20px;
+      height: 20px;
+      min-width: 20px;
+      min-height: 20px;
+      display: table;
+    }
+
+    &:after {
+      position: absolute;
+      content: '';
+      left: 5.5px;
+      top: 50%;
+      transform: translateY(-50%) scale(0);
+      background-color: #313131;
+
+      width: 10px;
+      height: 10px;
+      opacity: 0;
+      transition: 300ms;
+    }
+  }
+}

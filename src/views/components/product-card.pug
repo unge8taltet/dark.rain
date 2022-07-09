@@ -3,14 +3,18 @@
         .product-card__wrapper
             .product-card__left
                 .card-gallary
-                    .card-gallary__main
-                        img(src=require("../../public/images/card-1.jpg") alt="")
+                    .card-gallary__main.swiper
+                        .swiper-wrapper
+                            .swiper-slide
+                                img(src=require("../../public/images/bestsellers-1.jpg") alt="").product__image
+                            .swiper-slide
+                                img(src=require("../../public/images/bestsellers-1.jpg") alt="").product__image
+                            .swiper-slide
+                                img(src=require("../../public/images/bestsellers-1.jpg") alt="").product__image
+                            .swiper-slide
+                                img(src=require("../../public/images/bestsellers-1.jpg") alt="").product__image
+                        .swiper-pagination.product-pagination
                     .card-gallary__items
-                        img(src=require("../../public/images/card.jpg") alt="")
-                        img(src=require("../../public/images/card.jpg") alt="")
-                        img(src=require("../../public/images/card.jpg") alt="")
-                        img(src=require("../../public/images/card.jpg") alt="")
-                        img(src=require("../../public/images/card.jpg") alt="")
                         img(src=require("../../public/images/card.jpg") alt="")
             .product-card__right
                 .product-card__name
@@ -22,15 +26,17 @@
                         p.product-card__article Арт. MR4001
                 p.product-card__subtitle Серьги из серебра
                 .product-card__prices
+                    p.product-card__price.product-card__price--sale 5660
+                        span руб
                     p.product-card__price 4300
                         span руб
                 .product-card__button
                     button(type='submit').btn.btn--dark Добавить в корзину
                     button.product__pay Купить в 1 клик
                 .product-package
-                    label.product-package__checkbox
-                        input(type="checkbox")
-                        p Добавить подарочную упаковку
+                    label.product-package__checkbox.field-checkbox-box
+                        input(type="checkbox").product-package-checkbox
+                        span Добавить подарочную упаковку
                     .product-package__wrapper
                         .product-package__image
                             img(src=require("../../public/images/package.jpg") alt="")
@@ -65,8 +71,6 @@
                         .dropdown__header
                             p.dropdown__title Гарантии
                 .explanation
-                    p Если вы сомневаетесь в выборе подходящего украшения или не уверены в
-                        | размере изделия, закажите доставку нескольких украшений и определитесь
-                        | с выбором на месте!
+                    p Если вы сомневаетесь в выборе подходящего украшения или не уверены в размере изделия, закажите доставку нескольких украшений и определитесь с выбором на месте!
 
 

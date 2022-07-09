@@ -3,6 +3,22 @@ import Swiper, {Navigation, Pagination} from "swiper";
 
 window.addEventListener('DOMContentLoaded', () => {
 
+
+    const productPackageCheckbox = document.querySelector('.product-package-checkbox')
+    if (productPackageCheckbox) {
+        const productPackage = document.querySelector('.product-package')
+
+        if (productPackage) {
+            productPackageCheckbox.addEventListener('change', () => {
+                if (productPackageCheckbox.checked) {
+                    productPackage.classList.add('product-package--is')
+                } else {
+                    productPackage.classList.remove('product-package--is')
+                }
+            })
+        }
+    }
+
     const searchHeader = document.querySelector('.header__search-form')
     const headerMenu = document.querySelector('.header-menu')
 
@@ -173,6 +189,36 @@ window.addEventListener('DOMContentLoaded', () => {
             el: ".product-pagination"
         }
     });
+
+    new Swiper('.card-gallary__main', {
+        spaceBetween: 20,
+        nested: true,
+        slidesPerView: 1,
+        modules: [Pagination],
+        pagination: {
+            el: ".product-pagination"
+        },
+        on: {
+            init: (s) => {
+                let html = ""
+                const itemsContainer = document.querySelector('.card-gallary__items')
+
+                for (let i = 0; i < s.imagesToLoad.length; i++) {
+                    html += s.imagesToLoad[i].outerHTML
+                }
+
+                itemsContainer.innerHTML = html
+
+                const items = itemsContainer.querySelectorAll('img')
+                items.forEach((el, i) => {
+                    el.addEventListener('click', () => {
+                        s.slideTo(i)
+                    })
+                })
+            }
+        }
+    });
+
 
     new Swiper('.catalog-categories', {
         spaceBetween: 10,
