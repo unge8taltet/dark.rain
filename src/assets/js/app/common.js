@@ -2,9 +2,29 @@ import Swiper, {Navigation, Pagination} from "swiper";
 
 window.addEventListener('DOMContentLoaded', () => {
 
+    const basketOpen = document.querySelector('.basket__open')
+    const basketItems = document.querySelector('.basket__items')
+    const basketEditing = document.querySelector('.basket__editing')
+
+    if (basketOpen && basketItems) {
+        basketOpen.addEventListener('click', (e) => {
+            e.preventDefault()
+
+            basketItems.classList.toggle('basket__items--active')
+            basketOpen.classList.toggle('basket__open--active')
+            basketEditing.classList.toggle('basket__editing--active')
+
+            if (basketItems.classList.contains('basket__items--active')) {
+                basketItems.style.height = basketItems.scrollHeight + "px"
+            } else {
+                basketItems.style.height = "0px"
+            }
+        })
+    }
+
     const productCardTitle = document.querySelector('.product-card__title > h1')
     const productCardLike = document.querySelector('.product-card__like')
-    if(productCardTitle && productCardLike) {
+    if (productCardTitle && productCardLike) {
         const productCardTitleWidth = productCardTitle.clientWidth
         productCardLike.style.left = productCardTitleWidth + 20 + "px"
     }

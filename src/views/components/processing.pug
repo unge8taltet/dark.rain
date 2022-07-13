@@ -1,80 +1,127 @@
-.processing
+form.processing
+    h2.processing__title.processing__title--first КОНТАКТНАЯ ИНФОРМАЦИЯ:
     .processing__wrapper
         .processing__ordering
-            .processing__contacts
-                h3.processing__title--contact КОНТАКТНАЯ ИНФОРМАЦИЯ:
-                input(type="email" placeholder="Электронный адрес (еmail) *")
-                .processing-package
-                    label.field-checkbox
-                        input(type="checkbox")
-                        p Получать новости и специальные предложения
-                .processing__contact
-                    div
-                        input(type="text" placeholder="Имя *" required)
-                        input(type="text" placeholder="Город *" required)
-                    div
-                        input(type="text" placeholder="Фамилия *" required)
-                        input(type="phone" placeholder="Мобильный телефон *" required)
-            .processing__delivery
-                h3.processing__title--delivery Доставка:
-                label.field-radio
-                    input(type="radio" name="delivery" value="1")
-                    p Пункт выдачи СДЭК (Выбрать пункт выдачи)
-                label.field-radio
-                    input(type="radio" name="delivery" value="2")
-                    p Курьером до двери
-                label.field-radio
-                    input(type="radio" name="delivery" value="3")
-                    p Самовывоз из магазина (Санкт-Петербург, Набережная канала Грибоедова 99, 2 этаж)
-                label.field-radio
-                    input(type="radio" name="delivery" value="3")
-                    p Самовывоз из магазина (Москва, Оружейный переулок, 5)
-                label.field-radio
-                    input(type="radio" name="delivery" value="4")
-                    p Самовывоз из магазина (Москва, Новодмитровская 1, стр. 23 )
-            .processing__address
-                h3.processing__title--address Адрес:
-                input(type="text" name="address" placeholder="Улица, дом, квартира *").
-            .processing__payment
-                h3.processing__title--payment Способ оплаты:
-                label.field-radio
-                    input(type="radio" name="pay" value="1" checked)
-                    p Оплата при получении
-        .basket
+            .processing__content
+                .processing__contacts
+                    label.field-line
+                        span Электронный адрес (еmail) *
+                        input(type="email" name="email" required)
+                    .processing__receive-news
+                        label.field-checkbox-box
+                            input(type="checkbox")
+                            span Получать новости и специальные предложения
+                    .processing__contact
+                        div
+                            label.field-line
+                                span Имя *
+                                input(type="text" name="firstname" required)
+                            label.field-line
+                                span Город *
+                                input(type="text" name="city" required)
+                        div
+                            label.field-line
+                                span Фамилия *
+                                input(type="text" name="surname" required)
+                            label.field-line
+                                span Мобильный телефон *
+                                input(type="tel" name="phone" required)
+                .processing__delivery
+                    h2.processing__title Доставка:
+                    .processing__radios
+                        label.field-checkbox-circle
+                            input(type="radio" name="delivery" value="Пункт выдачи СДЭК (Выбрать пункт выдачи)")
+                            span
+                                span Пункт выдачи СДЭК
+                                    span (Выбрать пункт выдачи)
+                        label.field-checkbox-circle
+                            input(type="radio" name="delivery" value="Курьером до двери")
+                            span Курьером до двери
+                        label.field-checkbox-circle
+                            input(type="radio" name="delivery" value="Самовывоз из магазина (Санкт-Петербург, Набережная канала Грибоедова 99, 2 этаж)")
+                            span Самовывоз из магазина (Санкт-Петербург, Набережная канала Грибоедова 99, 2 этаж)
+                        label.field-checkbox-circle
+                            input(type="radio" name="delivery" value="Самовывоз из магазина (Москва, Оружейный переулок, 5)")
+                            span Самовывоз из магазина (Москва, Оружейный переулок, 5)
+                        label.field-checkbox-circle
+                            input(type="radio" name="delivery" value="Самовывоз из магазина (Москва, Новодмитровская 1, стр. 23 )")
+                            span Самовывоз из магазина (Москва, Новодмитровская 1, стр. 23 )
+                .processing__address
+                    h2.processing__title Адрес:
+                    label.field-line
+                        span Улица, дом, квартира *
+                        input(type="text" name="address" required)
+                .processing__payment
+                    h2.processing__title Способ оплаты:
+                    label.field-checkbox-circle
+                        input(type="radio" name="pay" value="Оплата при получении" checked)
+                        span Оплата при получении
+        .processing__basket.basket
             .basket__options
+                button(type="button").basket__open Посмотреть состав заказа
+                    +icon("next")
                 p.basket__text В корзине 2 товара
                 a(href="#").basket__editing Редактировать товары
             .basket__items
                 .basket-item
                     .basket-item__image
                         img(src=require("../../public/images/product.jpg") alt="")
-                    .basket-item__info
-                        p.basket-item__name COHOE
-                        p.basket-item__corps Серьги из серебра
-                        p.basket-item__article арт. A3051
-                    .basket-item__attr
-                        p.basket-item__amount Количество
-                        p.basket-item__unit 1 шт.
+                    .basket-item__inner
+                        .basket-item__info
+                            div
+                                p.basket-item__name COHOE
+                                p.basket-item__corps Серьги из серебра
+                            p.basket-item__article арт. A3051
+                        .basket-item__attrs
+                            p.basket-item__attr
+                                span.basket-item__key Размер:
+                                span.basket-item__value 16,5
+                            p.basket-item__attr
+                                span.basket-item__key Количество:
+                                span.basket-item__value 1
+                                    span.basket-item__unit шт.
                         p.basket-item__price 1850
                             span руб
-            .basket__coupon
-                input(type="text" placeholder="Код купона").
-                button(type="submit") Применить
-            .basket__check
+                .basket-item
+                    .basket-item__image
+                        img(src=require("../../public/images/product.jpg") alt="")
+                    .basket-item__inner
+                        .basket-item__info
+                            div
+                                p.basket-item__name COHOE
+                                p.basket-item__corps Серьги из серебра
+                            p.basket-item__article арт. A3051
+                        .basket-item__attrs
+                            p.basket-item__attr
+                                span.basket-item__key Количество:
+                                span.basket-item__value 1
+                                    span.basket-item__unit шт.
+                        p.basket-item__price 1850
+                            span руб
+                .basket-summ
+                    p.basket-summ__key Товары:
+                        span.basket-summ__value 1850
+                            span руб
+        .processing__basket-footer.basket-footer
+            .basket-footer__coupon.coupon
+                input(type="text" placeholder="Код купона").coupon__input
+                button(type="button").coupon__btn Применить
+            .basket-footer__check
                 div
-                    p.basket__calculation Сумма:
-                    p.basket__result 1860 руб
+                    p.basket-footer__val Сумма:
+                    p.basket-footer__val 1860 руб
                 div
-                    p.basket__calculation Доставка:
-                    p.basket__result 540 руб
+                    p.basket-footer__val Доставка:
+                    p.basket-footer__val 540 руб
                 div
-                    p.basket__calculation Скидки:
-                    p.basket__result -340 руб
-                div.processing-total
-                    p.procedding-total__check Итого:
-                    p.processing-total__result 1850
-                        span руб
-                    button(type='submit').btn.btn--dark Оформить заказ
+                    p.basket-footer__val Скидки:
+                    p.basket-footer__val -340 руб
+            .processing-total
+                p.processing-total__check Итого:
+                p.processing-total__result 1850
+                    span руб
+            .basket-footer__order
+                button(type='submit').btn.btn--dark.basket-footer__order-btn Оформить заказ
 
 
 

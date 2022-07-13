@@ -1,4 +1,5 @@
 .footer {
+  background: inherit;
 
   &__children {
     @include media-up(sm) {
