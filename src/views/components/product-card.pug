@@ -1,4 +1,4 @@
-.product-card
+form.product-card.product-card-form
     .container
         .product-card__wrapper
             .product-card__left
@@ -17,25 +17,38 @@
                     .card-gallary__items
                         img(src=require("../../public/images/card.jpg") alt="")
             .product-card__right
-                .product-card__name
-                    div
-                        h1.product-card__title Chiloe
-                        button.product-card__like
-                            +icon("heart")
-                    div
-                        p.product-card__article Арт. MR4001
+                .product-card__title
+                    h1 Chiloe
+                .product-card__like
+                    button(type='button')
+                        +icon("heart")
+                p.product-card__article Арт. MR4001
                 p.product-card__subtitle Серьги из серебра
+                .product-card__sizes.sizes
+                    p.sizes__title Размер
+                    .sizes__items
+                        label.field-checkbox-button.sizes__item
+                            input(type="radio" name="size" value="18").product-card__size
+                            span 18
+                        label.field-checkbox-button.sizes__item
+                            input(type="radio" name="size" value="18,5").product-card__size
+                            span 18,5
+                        label.field-checkbox-button.sizes__item
+                            input(type="radio" name="size" value="19").product-card__size
+                            span 19
+                        label.field-checkbox-button.sizes__item
+                            input(type="radio" name="size" value="19,5").product-card__size
+                            span 19,5
                 .product-card__prices
                     p.product-card__price.product-card__price--sale 5660
                         span руб
                     p.product-card__price 4300
                         span руб
-                .product-card__button
-                    button(type='submit').btn.btn--dark Добавить в корзину
-                    button.product__pay Купить в 1 клик
-                .product-package
+                button(type='submit').btn.btn--dark.product-card__to-card Добавить в корзину
+                button(type='button').product__pay.product-card__pay Купить в 1 клик
+                .product-package.product-card__package
                     label.product-package__checkbox.field-checkbox-box
-                        input(type="checkbox").product-package-checkbox
+                        input(type="checkbox" name="gift" value="Подарочная упаковка").product-package-checkbox
                         span Добавить подарочную упаковку
                     .product-package__wrapper
                         .product-package__image
@@ -44,8 +57,11 @@
                                 p.product-package__name Подарочная упаковка
                                 p.product-package__price 150 руб
                         .product-package__help
-                            +icon("info")
-                .product-question
+                            .prompt-hover
+                                +icon("info")
+                                .prompt.prompt--min
+                                    p.prompt__text Подарочная коробка Darkrain выполнена из плотного картона, в которую можно красиво упаковать украшения. В нее поместится до двух изделий, за исключением жестких браслетов. Размер: 6 х 6 х 3.7 см
+                .product-question.product-card__question
                     div.socials
                         a(href="/").socials__item
                             +icon("telegram")
@@ -53,24 +69,77 @@
                             +icon("whatsapp")
                     div.product-question__info
                         p Задайте нам вопрос
-                        button.product-question__icon
+                        product-question__icon.prompt-hover
                             +icon("question")
+                            .prompt
+                                p.prompt__title Наши специалисты ответят на ваши вопросы ежедневно с 11:00 до 20:30 по Московскому времени:
+                                ul.ul.prompt__list
+                                    li Помогут подобрать украшения
+                                        br
+                                        | и расскажут о них
+                                    li Подробно ответят на любые вопросы
+                                        br
+                                        | связанные с доставкой и оплатой
+                                    .prompt__socials
+                                        p Связаться с нами
+                                        .socials
+                                            a(href="/").socials__item
+                                                +icon("telegram")
+                                            a(href="/").socials__item
+                                                +icon("whatsapp")
                 .product-card__dropdowns
-                    .dropdown
+                    .dropdown.dropdown--active
                         .dropdown__header
                             p.dropdown__title Описание и характеристики
                         .dropdown__main
-
+                            ul.ul
+                                li Серебро 925 пробы
+                                li Родиевое покрытие
+                                li Cредний вес 0,48 гр
+                                li Материал: Серебро
+                                li Цвет:
+                                li Покрытие: Родий
                     .dropdown
                         .dropdown__header
                             p.dropdown__title Доставка
+                        .dropdown__main
+                            .dropdown__sect
+                                p.dropdown__subtitle Способы доставки:
+                                ul.ul.ml20
+                                    li Доставку осуществляем по всей территории РФ.
+                                    li Мы осуществляем доставку транспортной компанией СДЭК. Как правило, доставка занимает от 2 до 3 рабочих дней. Сибирь и Дальний восток 3-7 дней.
+                                    li Срочная доставка день в день, доступна в Петербурге и Москве по запросу в наших мессенджерах, либо по телефону +7 (812) 566-40-12 с 11:00 до 20:30
+                                    li
+                                        p Сроки доставки:
+                                        small
+                                            | — Санкт-Петербург и ЛО 2-4 рабочих дня, не считая дня приема заказа
+                                            br
+                                            | — Москва и МО 3-5 рабочих дней, не считая дня приема заказа
+                                            br
+                                            | — Сибирь, Дальний Восток 7-9 рабочих дней, не считая дня приема заказа
+                            .dropdown__sect
+                                p.dropdown__subtitle Общая информация:
+                                ul.ul.ml20
+                                    li Сбор заказа 1 рабочий день.
+                                    li В период распродажи сроки обработки заказа могут быть увеличены на 2 дня.
+                                    li В связи со сложной эпидемиологической ситуацией в стране и введенными ограничениями сроки доставки могут быть увеличены.
+                                    li В предпраздничные и постпраздничные дни возможно увеличение сроков доставки. Если вам нужна доставка к определенной дате или празднику, пожалуйста, сообщите нам об этом заранее.
+                                    li Желаем вам приятных покупок!
                     .dropdown
                         .dropdown__header
                             p.dropdown__title Оплата
+                        .dropdown__main
+                            ul.ul.ml20
+                                li Наличный и безналичный расчет курьеру или в пункте выдачи СДЭК при получении заказа.
+                                li Online-оплата банковской картой возможна только при покупке подарочного сертификата на сайте.
                     .dropdown
                         .dropdown__header
                             p.dropdown__title Гарантии
-                .explanation
+                        .dropdown__main
+                            ul.ul.ml20
+                                li Мы уверены в качестве своих изделий, поэтому даем гарантию 1 год с момента покупки. В течение гарантийного срока вы можете обратиться к нам по любым вопросам, касающимся качества украшений.
+                                li Подробнее с условиями вы можете ознакомиться в разделе Гарантия и возврат.
+                .explanation.product-card__explanation
                     p Если вы сомневаетесь в выборе подходящего украшения или не уверены в размере изделия, закажите доставку нескольких украшений и определитесь с выбором на месте!
 
 

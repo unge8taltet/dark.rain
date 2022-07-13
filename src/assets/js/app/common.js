@@ -1,8 +1,13 @@
 import Swiper, {Navigation, Pagination} from "swiper";
 
-
 window.addEventListener('DOMContentLoaded', () => {
 
+    const productCardTitle = document.querySelector('.product-card__title > h1')
+    const productCardLike = document.querySelector('.product-card__like')
+    if(productCardTitle && productCardLike) {
+        const productCardTitleWidth = productCardTitle.clientWidth
+        productCardLike.style.left = productCardTitleWidth + 20 + "px"
+    }
 
     const productPackageCheckbox = document.querySelector('.product-package-checkbox')
     if (productPackageCheckbox) {

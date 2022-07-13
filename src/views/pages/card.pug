@@ -8,5 +8,49 @@ block content
     .container
         include ../components/breadcrumbs
     include ../components/product-card
-    include ../components/bestsellers
+    .bestsellers
+        .container
+            h2.title.bestsellers__title Похожие товары
+            .slider
+                .swiper.bestsellers__swiper
+                    .swiper-wrapper
+                        .swiper-slide.product
+                            a(href="#").product__link
+                            .product__header
+                                .product__swiper.swiper
+                                    .swiper-wrapper
+                                        .product__slide.swiper-slide
+                                            a(href="#").product__slide-link
+                                            img(src=require("../../public/images/bestsellers-1.jpg") alt="").product__image
+                                    .swiper-pagination.product-pagination
+                                .product__badges
+                                    span.product__badge -30%
+                                button.product__like.product__like--active
+                                    +icon("heart-filled")
+                            .product__main
+                                .product__info
+                                    h3.product__title COHOE
+                                    .product__prices
+                                        p.product__price.product__price--sale 2660
+                                            span руб
+                                        p.product__price 1850
+                                            span руб
+                                p.product__category Серьги из серебра
+                            .product__footer
+                                button.product__cart
+                                    +icon("cart")
+                                    span добавить
+                                    |  в корзину
+                                button.product__pay Купить в 1 клик
+                        include ../components/product
+                        include ../components/product
+                        include ../components/product
+                        include ../components/product
+                        include ../components/product
+                        include ../components/product
+                        include ../components/product
+                button.slider__arrow.slider__arrow--prev.bestsellers__arrow--prev
+                    +icon("prev")
+                button.slider__arrow.slider__arrow--next.bestsellers__arrow--next
+                    +icon("next")
     include ../components/subscription

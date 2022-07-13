@@ -1,0 +1,75 @@
+.prompt {
+  cursor: default;
+  position: absolute;
+  top: 13px + 16px;
+  left: 0;
+  width: 351px;
+  background: #FFFFFF;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.09);
+  padding: 20px;
+  z-index: 20;
+  visibility: hidden;
+  opacity: 0;
+  transition: 300ms;
+
+  @include media-down(md) {
+    left: auto;
+    right: 0;
+  }
+
+  &--min {
+    width: 323px;
+  }
+
+  &__text {
+    font-size: 14px;
+    line-height: 150%;
+    color: #313131;
+  }
+
+  &__title {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 150%;
+    color: #313131;
+    margin-bottom: 20px;
+  }
+
+  &__list {
+    margin-bottom: 25px;
+  }
+
+  &__socials {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    p {
+      font-size: 12px;
+      line-height: 150%;
+      color: #313131;
+    }
+
+    .socials__item, .socials__item .icon {
+      height: 27px;
+      width: 27px;
+    }
+
+    .socials {
+      gap: 11px;
+    }
+  }
+}
+
+.prompt-hover {
+  position: relative;
+  cursor: pointer;
+
+  &:hover {
+    .prompt {
+
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+}
