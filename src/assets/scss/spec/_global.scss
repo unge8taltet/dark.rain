@@ -48,3 +48,43 @@ body {
     margin-bottom: 29px;
   }
 }
+
+
+#map-shops {
+  height: 24em;
+
+  &:not(:last-child) {
+    margin-bottom: 4em;
+  }
+}
+
+.mb-6 {
+  margin-bottom: 6em;
+}
+
+
+.content {
+  margin-bottom: 6em;
+
+  h1 {
+    font-family: $font-ledger;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 160%;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #313131;
+    margin-bottom: 1em;
+
+    @include media-down(md) {
+      font-size: 24px;
+      line-height: 123.8%;
+    }
+  }
+
+  p {
+    &:not(:last-child) {
+      margin-bottom: 1em;
+    }
+  }
+}

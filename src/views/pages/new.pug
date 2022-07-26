@@ -1,0 +1,17 @@
+extends ../layout/default
+include ../components/mixins/icon
+
+block vars
+    - pageClass = 'new'
+    - headTitle = 'New'
+block content
+    .page-new
+        .page-banner
+            img(src=require('@images/page-banner-new.jpg') alt="banner").page-banner__img
+        .container
+            include ../components/breadcrumbs
+            h1.page-new__title NEW
+            p.page-new__text В этом дропе мы поэкспериментировали с формами серег. В него вошли архитектурные, плоские и скульптурные модели. Добавили кольца в античном стиле и массивные каффы. Также у нас появились лабреты.
+        .container
+            include ../components/catalog/layout
+            include ../components/subscription

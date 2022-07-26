@@ -1,0 +1,62 @@
+extends ../layout/default
+include ../components/mixins/icon
+
+block vars
+    - pageClass = 'care'
+    - headTitle = 'Care'
+block content
+    .page-banner
+        img(src=require('@images/page-banner-care.jpg') alt="banner").page-banner__img
+        .container.page-banner__container
+            h1.page-banner__title КАК УХАЖИВАТЬ ЗА УКРАШЕНИЯМИ?
+            p.page-banner__subtitle Рекомендации специалистов
+    .container
+        include ../components/breadcrumbs
+    .container-small
+        .picture-text
+            .picture-text__section
+                img(src=require('@images/care.jpg') alt="size").picture-text__img
+            .picture-text__section
+                h2.picture-text__title ОСОБЕННОСТИ РАЗНЫХ ВИДОВ ПОКРЫТИЙ
+                p.picture-text__text Украшения из нашего ассортимента покрыты родием или позолотой в зависимости от модели. Также у нас есть изделия со вставками. Для того, чтобы такие украшения как можно дольше сохраняли свой первоначальный вид, мы рекомендуем следовать советам по уходу.
+
+    .principles
+        .container-small
+            h2.principles__title ОСНОВЫЕ ПРИНЦИПЫ
+            .principles__column
+                .principles__row
+                    .principle
+                        span
+                            +icon('number-1')
+                        p Не чистить украшения абразивными или аммиакосодержащими средствами.
+                    .principle
+                        span
+                            +icon('number-2')
+                        p Надевать изделия только после того, как спиртосодержащая косметика и парфюм впитаются в кожу.
+                    .principle
+                        span
+                            +icon('number-3')
+                        p Следует избегать контакта украшений с водой и бытовой химией.
+                .principles__row
+                    .principle
+                        span
+                            +icon('number-4')
+                        p Снимать изделия перед сном, походом в сауну, в спортзал и на пляж.
+                    .principle
+                        span
+                            +icon('number-5')
+                        p Хранить украшения в шкатулке или отдельном тканевом мешочке.
+                    .principle
+                        span
+                            +icon('number-6')
+                        p Закручивать пусеты на винтовом замке не спеша. В случае, если закрутка не поворачивается, следует снять серьгу.
+    .container-small
+        .mb-6
+            .picture-text
+                .picture-text__section
+                    img(src=require('@images/care.jpg') alt="size").picture-text__img
+                .picture-text__section
+                    h2.picture-text__title ВОСПОЛЬЗУЙТЕСЬ УСЛУГАМИ МАСТЕРСКИХ
+                    p.picture-text__text При соблюдении всех рекомендаций и правильном уходе – украшения прослужат долго. Но со временем родиевое покрытие или золочение будет стираться. Это естественный процесс. В случае, если изделие местами потеряло блеск или потемнело, это поправимо. В хороших ювелирных мастерских есть услуга повторного нанесения покрытия.
+    .container
+        include ../components/subscription

@@ -1,2 +1,18 @@
 /* ROUTES STYLES */
-@import "home";
+.page-new {
+  &__title {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+    margin-bottom: 1em;
+    font-family: $font-ledger;
+
+    @include media-down(sm) {
+      font-size: 1.4rem;
+    }
+  }
+
+  &__text {
+    max-width: 600px;
+    margin-bottom: 3em;
+  }
+}

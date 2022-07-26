@@ -1,0 +1,40 @@
+.picture-text {
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 5rem;
+  row-gap: 3rem;
+
+  @include media-down(sm) {
+    font-size: 1.5rem;
+    grid-template-columns: 1fr;
+  }
+
+  &__text {
+    @include media-down(sm) {
+      font-size: 1rem;
+    }
+  }
+
+  &__title {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+    font-family: $font-ledger;
+    font-weight: 500;
+    margin-bottom: 1em;
+
+    @include media-down(md) {
+      font-size: 1.5rem;
+    }
+
+    @include media-down(sm) {
+      font-size: 1.35rem;
+    }
+  }
+
+  &__img {
+    width: 100%;
+  }
+}

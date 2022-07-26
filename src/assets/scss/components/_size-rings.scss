@@ -1,0 +1,150 @@
+.size-rings {
+  padding-top: 5em;
+  padding-bottom: 5em;
+  background-color: rgba(249,249, 249, 1);
+  margin-top: 5em;
+  margin-bottom: 5em;
+
+  @include media-down(sm) {
+    margin-top: 3em;
+    margin-bottom: 3em;
+    padding-top: 3em;
+    padding-bottom: 3em;
+  }
+
+  &__title {
+    text-align: center;
+    font-family: $font-ledger;
+    font-weight: 500;
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+    margin-bottom: 2em;
+
+    @include media-down(md) {
+      font-size: 1.5rem;
+    }
+
+    @include media-down(sm) {
+      font-size: 1.35rem;
+    }
+  }
+
+  &__items {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.4em;
+
+    @include media-down(md) {
+      gap: 1em;
+      justify-content: space-around;
+    }
+
+    @include media-down(xs) {
+      gap: .1em;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 2em;
+
+
+
+      @include media-down(xsm) {
+        margin-bottom: .7em;
+      }
+    }
+
+    &--big {
+      gap: 2.6em;
+
+      @include media-down(md) {
+        gap: 1em;
+      }
+
+      @include media-down(xs) {
+        gap: .1em;
+      }
+    }
+  }
+}
+
+.size-ring {
+  $root: &;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__text {
+    font-size: 0.9em;
+    text-align: center;
+
+    @include media-down(sm) {
+      font-size: .7em;
+    }
+
+    @include media-down(xs) {
+      font-size: .6em;
+    }
+  }
+
+  &__circle {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #111;
+    font-size: 1.6em;
+    line-height: 1.5rem;
+    margin-bottom: 0.4em;
+
+    @include media-down(sm) {
+      width: 50px;
+      height: 50px;
+      font-size: 1.2em;
+    }
+
+    @include media-down(xs) {
+      width: 30px;
+      height: 30px;
+      font-size: 1em;
+    }
+
+    @include media-down(xsm) {
+      width: 40px;
+      height: 40px;
+      font-size: 1em;
+    }
+
+    @include media-down(xs) {
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+  &--big {
+    #{$root}__circle {
+      width: 80px;
+      height: 80px;
+      font-size: 1.8em;
+
+      @include media-down(sm) {
+        width: 60px;
+        height: 60px;
+        font-size: 1.4em;
+      }
+
+      @include media-down(xsm) {
+        width: 40px;
+        height: 40px;
+        font-size: 1em;
+      }
+
+      @include media-down(xs) {
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }
+}

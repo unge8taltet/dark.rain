@@ -1,0 +1,72 @@
+extends ../layout/default
+include ../components/mixins/icon
+
+block vars
+    - pageClass = 'size'
+    - headTitle = 'Size'
+block content
+    .page-banner
+        img(src=require('@images/page-banner-size.jpg') alt="banner").page-banner__img
+        .container.page-banner__container
+            h1.page-banner__title КАК ОПРЕДЕЛИТЬ РАЗМЕР КОЛЬЦА
+    .container
+        include ../components/breadcrumbs
+    .container-small
+        .picture-text
+            .picture-text__section
+                img(src=require('@images/size.jpg') alt="size").picture-text__img
+            .picture-text__section
+                h2.picture-text__title КАК ВЫБРАТЬ РАЗМЕР КОЛЬЦА
+                p.picture-text__text Если у вас есть кольцо – обведите украшение по внутренней стороне, а затем замерьте диаметр получившегося круга. Если кольца нет, оберните нитку или полоску бумаги вокруг нужного пальца. Потом разверните, и замерьте получившуюся окружность в миллиметрах. Результат можете сверить со специальной таблицей значений.
+    .size-rings
+        .container-small
+            h2.size-rings__title РАЗМЕРЫ КОЛЕЦ
+            .size-rings__items
+                .size-ring
+                    p.size-ring__circle 13
+                    p.size-ring__text 40–41 мм
+                .size-ring
+                    p.size-ring__circle 13.5
+                    p.size-ring__text 40–41 мм
+                .size-ring
+                    p.size-ring__circle 13
+                    p.size-ring__text 40–41 мм
+                .size-ring
+                    p.size-ring__circle 13
+                    p.size-ring__text 40–41 мм
+                .size-ring
+                    p.size-ring__circle 13
+                    p.size-ring__text 40–41 мм
+                .size-ring
+                    p.size-ring__circle 13
+                    p.size-ring__text 40–41 мм
+                .size-ring
+                    p.size-ring__circle 13
+                    p.size-ring__text 40–41 мм
+                .size-ring
+                    p.size-ring__circle 13
+                    p.size-ring__text 40–41 мм
+            .size-rings__items.size-rings__items--big
+                .size-ring.size-ring--big
+                    p.size-ring__circle 13
+                    p.size-ring__text 40–41 мм
+                .size-ring.size-ring--big
+                    p.size-ring__circle 13
+                    p.size-ring__text 40–41 мм
+                .size-ring.size-ring--big
+                    p.size-ring__circle 13
+                    p.size-ring__text 40–41 мм
+                .size-ring.size-ring--big
+                    p.size-ring__circle 13
+                    p.size-ring__text 40–41 мм
+                .size-ring.size-ring--big
+                    p.size-ring__circle 13
+                    p.size-ring__text 40–41 мм
+                .size-ring.size-ring--big
+                    p.size-ring__circle 13
+                    p.size-ring__text 40–41 мм
+                .size-ring.size-ring--big
+                    p.size-ring__circle 13
+                    p.size-ring__text 40–41 мм
+    .container
+        include ../components/subscription

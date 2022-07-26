@@ -257,4 +257,98 @@ window.addEventListener('DOMContentLoaded', () => {
             }
         }
     });
+
+
+    function initMap() {
+        if (document.querySelector('#map-shops')) {
+            google.maps.event.addDomListener(window, 'load', init);
+        }
+
+        function init() {
+            let coords = document.getElementById('map-shops').dataset.coords,
+                coordsArray = coords.split(','),
+                locations = [];
+
+            for (let i = 0; i < coordsArray.length; i++) {
+                if (i % 2 !== 0) {
+                    continue;
+                }
+                locations.push(coordsArray[i] + ',' + coordsArray[i + 1])
+            }
+
+            let styles = [
+                    {
+                        stylers: [
+                            {hue: "#00ffe6"},
+                            {saturation: -100}
+                        ]
+                    }, {
+                        featureType: "road",
+                        elementType: "geometry",
+                        stylers: [
+                            {lightness: 100},
+                            {visibility: "simplified"}
+                        ]
+                    }, {
+                        featureType: "road",
+                        elementType: "labels",
+                        stylers: [
+                            {visibility: "off"}
+                        ]
+                    }
+                ],
+
+                image = {
+                    url: 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent('<svg width="29" height="39" viewBox="0 0 29 39" fill="none" xmlns="http://www.w3.org/2000/svg">\n' +
+                        '<path d="M25.6068 23.6451L2.94824 23.6451L14.0918 38.5582L25.6068 23.6451Z" fill="black"/>\n' +
+                        '<path fill-rule="evenodd" clip-rule="evenodd" d="M14.2799 29.2644C22.1664 29.2644 28.5597 22.8711 28.5597 14.9846C28.5597 7.09802 22.1664 0.704712 14.2799 0.704712C6.39331 0.704712 0 7.09802 0 14.9846C0 22.8711 6.39331 29.2644 14.2799 29.2644ZM14.2794 21.5072C17.8817 21.5072 20.802 18.5869 20.802 14.9846C20.802 11.3823 17.8817 8.46204 14.2794 8.46204C10.6771 8.46204 7.75684 11.3823 7.75684 14.9846C7.75684 18.5869 10.6771 21.5072 14.2794 21.5072Z" fill="black"/>\n' +
+                        '</svg>'),
+                    size: new google.maps.Size(200, 200),
+                    scaledSize: new google.maps.Size(32, 32),
+                    anchor: new google.maps.Point(16, 16),
+                    labelOrigin: new google.maps.Point(16, 16)
+                },
+
+                mapOptions = {
+                    center: {lat: 58.275649, lng: 33.457609},
+                    styles: styles,
+                    icon: image,
+                    zoom: 5,
+                    zoomControl: true,
+                    zoomControlOptions: {
+                        style: google.maps.ZoomControlStyle.DEFAULT,
+                    },
+                    disableDoubleClickZoom: true,
+                    mapTypeControl: false,
+                    mapTypeControlOptions: {
+                        style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
+                    },
+                    scaleControl: true,
+                    scrollwheel: false,
+                    panControl: true,
+                    streetViewControl: false,
+                    draggable: true,
+                    overviewMapControl: true,
+                    overviewMapControlOptions: {
+                        opened: false,
+                    },
+                    mapTypeId: google.maps.MapTypeId.ROADMAP,
+                },
+
+                mapElement = document.getElementById('map-shops'),
+                map = new google.maps.Map(mapElement, mapOptions);
+
+            for (let i = 0; i < locations.length; i++) {
+
+                let latlng = locations[i].split(',');
+
+                new google.maps.Marker({
+                    position: new google.maps.LatLng(latlng[0], latlng[1]),
+                    map: map,
+                    icon: image
+                });
+            }
+        }
+    }
+    initMap()
 })

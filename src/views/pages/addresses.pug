@@ -1,0 +1,86 @@
+extends ../layout/default
+include ../components/mixins/icon
+
+block vars
+    - pageClass = 'addresses'
+    - headTitle = 'Addresses'
+block content
+    .container
+        include ../components/breadcrumbs
+        h1.title МАГАЗИНЫ
+        #map-shops(data-coords="59.92708060,30.30080330,55.77148400,37.59809600,55.806476647810385,37.5844746699259,56.83743927122763,60.62330879879363,")
+        .addresses-box
+            .addresses-box__left
+                .addresses-box__header
+                    h2.addresses-box__title Санкт-Петербург
+                    p.addresses-box__text  Набережная канала Грибоедова 99,  Вход со стороны Львиного Переулка, черная дверь, 2 этаж
+                .addresses-box__contacts
+                    p.addresses-box__contact Телефон:
+                        span
+                            a(href="tel:+78126158843" target="_blank") +7 (812) 615-88-43
+                    p.addresses-box__contact E-mail:
+                        span
+                            a(href="mailto:info@darkrain.store" target="_blank") info@darkrain.store
+                    p.addresses-box__contact Режим работы:
+                        span Ждём вас ежедневно с 12:00 до 21:00
+
+            .addresses-box__right
+                img(src=require("@images/addresses-1.jpg") alt="addresses-1").addresses-box__img
+                img(src=require("@images/addresses-2.jpg") alt="addresses-2").addresses-box__img
+        .addresses-box
+            .addresses-box__left
+                .addresses-box__header
+                    h2.addresses-box__title Санкт-Петербург
+                    p.addresses-box__text  Набережная канала Грибоедова 99,  Вход со стороны Львиного Переулка, черная дверь, 2 этаж
+                .addresses-box__contacts
+                    p.addresses-box__contact Телефон:
+                        span
+                            a(href="tel:+78126158843" target="_blank") +7 (812) 615-88-43
+                    p.addresses-box__contact E-mail:
+                        span
+                            a(href="mailto:info@darkrain.store" target="_blank") info@darkrain.store
+                    p.addresses-box__contact Режим работы:
+                        span Ждём вас ежедневно с 12:00 до 21:00
+
+            .addresses-box__right
+                img(src=require("@images/addresses-1.jpg") alt="addresses-1").addresses-box__img
+                img(src=require("@images/addresses-2.jpg") alt="addresses-2").addresses-box__img
+
+        .addresses-box
+            .addresses-box__left
+                .addresses-box__header
+                    h2.addresses-box__title Санкт-Петербург
+                    p.addresses-box__text  Набережная канала Грибоедова 99,  Вход со стороны Львиного Переулка, черная дверь, 2 этаж
+                .addresses-box__contacts
+                    p.addresses-box__contact Телефон:
+                        span
+                            a(href="tel:+78126158843" target="_blank") +7 (812) 615-88-43
+                    p.addresses-box__contact E-mail:
+                        span
+                            a(href="mailto:info@darkrain.store" target="_blank") info@darkrain.store
+                    p.addresses-box__contact Режим работы:
+                        span Ждём вас ежедневно с 12:00 до 21:00
+
+            .addresses-box__right
+                img(src=require("@images/addresses-1.jpg") alt="addresses-1").addresses-box__img
+                img(src=require("@images/addresses-2.jpg") alt="addresses-2").addresses-box__img
+        .addresses-box
+            .addresses-box__left
+                .addresses-box__header
+                    h2.addresses-box__title Санкт-Петербург
+                    p.addresses-box__text  Набережная канала Грибоедова 99,  Вход со стороны Львиного Переулка, черная дверь, 2 этаж
+                .addresses-box__contacts
+                    p.addresses-box__contact Телефон:
+                        span
+                            a(href="tel:+78126158843" target="_blank") +7 (812) 615-88-43
+                    p.addresses-box__contact E-mail:
+                        span
+                            a(href="mailto:info@darkrain.store" target="_blank") info@darkrain.store
+                    p.addresses-box__contact Режим работы:
+                        span Ждём вас ежедневно с 12:00 до 21:00
+
+            .addresses-box__right
+                img(src=require("@images/addresses-1.jpg") alt="addresses-1").addresses-box__img
+                img(src=require("@images/addresses-2.jpg") alt="addresses-2").addresses-box__img
+        include ../components/subscription
+    script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBoK4ev-Us6YILRop6Org0Z1y1yIwGtSsk&amp;extension=.js&amp;ver=4.9.1")
