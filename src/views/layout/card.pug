@@ -1,0 +1,85 @@
+.dialog.dialog--right.dialog-favorites.dialog-card#dialog-card
+    .dialog__blackout.blackout.dialog-close(data-dialog="#dialog-card")
+    .dialog__main
+        .dialog__header
+            .dialog__container
+                .dialog__title
+                    p
+                        | В корзине
+                        span.favorite-counter  2
+                        |  товара
+                    button(data-dialog="#dialog-card").dialog__close.dialog-close
+                        +icon("close")
+        .dialog__scrollbar
+            .dialog__container
+                .dialog__wrapper
+                    .dialog__section.dialog-favorites__products
+                        .basket-item
+                            .basket-item__wrapper
+                                .basket-item__image
+                                    img(src=require("../../public/images/product.jpg") alt="")
+                                .basket-item__inner
+                                    .basket-item__info
+                                        div
+                                            p.basket-item__name COHOE
+                                            p.basket-item__corps Серьги из серебра
+                                        button.basket-item__remove Удалить
+                                    .basket-item__inner-wrapper
+                                        .basket-item__attrs
+                                            p.basket-item__attr
+                                                span.basket-item__key арт. A3051
+                                            p.basket-item__attr
+                                                span.basket-item__key Размер:
+                                                span.basket-item__value 16,5
+                                        .basket-item__counter
+                                            button.basket-item__counter-minus
+                                            span 0
+                                            button.basket-item__counter-plus
+                                    p.basket-item__price 1850
+                                        span руб
+                        .basket-item
+                            .basket-item__wrapper
+                                .basket-item__image
+                                    img(src=require("../../public/images/product.jpg") alt="")
+                                .basket-item__inner
+                                    .basket-item__info
+                                        div
+                                            p.basket-item__name COHOE
+                                            p.basket-item__corps Серьги из серебра
+                                        button.basket-item__remove Удалить
+                                    .basket-item__inner-wrapper
+                                        .basket-item__attrs
+                                            p.basket-item__attr
+                                                span.basket-item__key арт. A3051
+                                            p.basket-item__attr
+                                                span.basket-item__key Размер:
+                                                span.basket-item__value 16,5
+                                        .basket-item__counter
+                                            button.basket-item__counter-minus
+                                            span 0
+                                            button.basket-item__counter-plus
+                                    p.basket-item__price 1850
+                                        span руб
+                    .dialog__section
+                        .basket-footer__coupon.coupon
+                            input(type="text" placeholder="Код купона").coupon__input
+                            button(type="button").coupon__btn Применить
+                        .basket-footer__check
+                            div
+                                p.basket-footer__val Сумма:
+                                p.basket-footer__val 1860 руб
+                            div
+                                p.basket-footer__val Доставка:
+                                p.basket-footer__val 540 руб
+                            div
+                                p.basket-footer__val Скидки:
+                                p.basket-footer__val -340 руб
+        .dialog__footer
+            .dialog__container
+                .processing-total
+                    p.processing-total__check Итого:
+                    p.processing-total__result 1850
+                        span руб
+                .basket-footer__order
+                    a(href="#").dialog-favorites__next Продолжить покупки
+                    button(type='submit').btn.btn--dark.basket-footer__order-btn Оформить заказ

@@ -49,7 +49,7 @@
 
 
 
-      @include media-down(xsm) {
+      @include media-down(sm) {
         margin-bottom: .7em;
       }
     }
@@ -111,12 +111,6 @@
       font-size: 1em;
     }
 
-    @include media-down(xsm) {
-      width: 40px;
-      height: 40px;
-      font-size: 1em;
-    }
-
     @include media-down(xs) {
       width: 30px;
       height: 30px;
@@ -133,12 +127,6 @@
         width: 60px;
         height: 60px;
         font-size: 1.4em;
-      }
-
-      @include media-down(xsm) {
-        width: 40px;
-        height: 40px;
-        font-size: 1em;
       }
 
       @include media-down(xs) {

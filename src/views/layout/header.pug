@@ -29,12 +29,12 @@ header.header
                     +icon("logo")
             a(href="#").header__profile.header__icon
                 +icon("user")
-            a(href="#").backing.backing--favorite
-                span 1
+            button(data-dialog="#dialog-favorites").backing.backing--favorite.dialog-open
+                span.favorite-counter 1
                 +icon('heart')
                 +icon('heart-filled')
-            a(href="#").header__cart.header__icon.backing.backing--cart.backing--is
-                span 1
+            button(data-dialog="#dialog-card").dialog-open.header__cart.header__icon.backing.backing--cart.backing--is
+                span.card-counter 1
                 +icon('cart')
                 +icon('cart-filled')
             .header__nav.header-menu

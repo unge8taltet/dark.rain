@@ -1,0 +1,69 @@
+.dialog.dialog--right.dialog-favorites#dialog-favorites
+    .dialog__blackout.blackout.dialog-close(data-dialog="#dialog-favorites")
+    .dialog__main
+        .dialog__header
+            .dialog__container
+                .dialog__title
+                    p
+                        | В избранном
+                        span.favorite-counter  2
+                        |  товара
+                    button(data-dialog="#dialog-favorites").dialog__close.dialog-close
+                        +icon("close")
+        .dialog__scrollbar
+            .dialog__container
+                .dialog__wrapper
+                    .dialog__section.dialog-favorites__products
+                        .basket-item
+                            .basket-item__wrapper
+                                .basket-item__image
+                                    img(src=require("../../public/images/product.jpg") alt="")
+                                .basket-item__inner
+                                    .basket-item__info
+                                        div
+                                            p.basket-item__name COHOE
+                                            p.basket-item__corps Серьги из серебра
+                                        button.basket-item__remove Удалить
+                                    .basket-item__attrs
+                                        p.basket-item__attr
+                                            span.basket-item__key арт. A3051
+                                        p.basket-item__attr
+                                            span.basket-item__key Количество:
+                                            span.basket-item__value 1
+                                        p.basket-item__attr
+                                            span.basket-item__key Размер:
+                                            span.basket-item__value 16,5
+                                    p.basket-item__price 1850
+                                        span руб
+                            .basket-item__footer
+                                button.basket-item__cart
+                                    +icon("cart")
+                                    span добавить в корзину
+                        .basket-item
+                            .basket-item__wrapper
+                                .basket-item__image
+                                    img(src=require("../../public/images/product.jpg") alt="")
+                                .basket-item__inner
+                                    .basket-item__info
+                                        div
+                                            p.basket-item__name COHOE
+                                            p.basket-item__corps Серьги из серебра
+                                        button.basket-item__remove Удалить
+                                    .basket-item__attrs
+                                        p.basket-item__attr
+                                            span.basket-item__key арт. A3051
+                                        p.basket-item__attr
+                                            span.basket-item__key Количество:
+                                            span.basket-item__value 1
+                                        p.basket-item__attr
+                                            span.basket-item__key Размер:
+                                            span.basket-item__value 16,5
+                                    p.basket-item__price 1850
+                                        span руб
+                            .basket-item__footer
+                                button.basket-item__cart
+                                    +icon("cart")
+                                    span добавить в корзину
+        .dialog__footer
+            .dialog__container
+                a(href="#").dialog-favorites__next Продолжить покупки
