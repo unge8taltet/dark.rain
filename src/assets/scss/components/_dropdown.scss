@@ -76,6 +76,18 @@
     overflow: hidden;
     height: 0;
     transition: 300ms;
+
+    p {
+      &:not(:last-child) {
+        margin-bottom: 1em;
+      }
+    }
+
+    &--small {
+      p {
+        font-size: 14px;
+      }
+    }
   }
 
   &--active {

@@ -2,9 +2,53 @@ extends ../layout/default
 include ../components/mixins/icon
 
 block vars
-    - pageClass = 'certificate'
     - headTitle = 'Certificate'
 block content
     .container
         include ../components/breadcrumbs
-        h1.page-title СЕРТИФИКАТ
+        .certificate
+            .certificate__images.js-cert-images.cert-1000
+                img(src=require("@images/cert-img-1.png")).certificate__image.certificate__image-1
+                img(src=require("@images/cert-img-2.png")).certificate__image.certificate__image-2
+                img(src=require("@images/cert-img-3.png")).certificate__image.certificate__image-3
+                img(src=require("@images/cert-img-4.png")).certificate__image.certificate__image-4
+                img(src=require("@images/cert-img-5.png")).certificate__image.certificate__image-5
+                img(src=require("@images/cert-img-6.png")).certificate__image.certificate__image-6
+                img(src=require("@images/cert-img-7.png")).certificate__image.certificate__image-7
+                img(src=require("@images/cert-img-8.png")).certificate__image.certificate__image-8
+            .certificate__header
+                h1.certificate__title СЕРТИФИКАТ
+                p.certificate__text Свободного номинала
+                    br
+                    | Минимальная сумма – 1 000 рублей.
+            form.certificate__main
+                label.certificate__field
+                    input(type="text" name="price" placeholder="0" required).js-price-input
+                    span рублей
+                .certificate__form
+                    label.certificate__input-text
+                        input(type="text" name="name" placeholder="Имя получателя" required)
+                    label.certificate__input-text
+                        input(type="text" name="email" placeholder="Ваш e-mail" required)
+                    label.certificate__input-text
+                        input(type="text" name="phone" placeholder="Ваш телефон" required)
+                    button(type="submit").btn.btn--dark.certificate__btn Заказать сертификат
+                    label.field-checkbox-box
+                        input(type="checkbox" name="get")#certificate-get
+                        span Забрать бумажную версию в магазине
+                    .certificate__select#certificate-select
+                        select.custom-select
+                            option(value="Санкт-Петербург") Санкт-Петербург, Набережная канала Грибоедова 99,  Вход со стороны Львиного Переулка, черная дверь, 2 этаж
+                            option(value="Москва") Москва, Оружейный переулок 5, вход со стороны 4-ой Тверской-Ямской улицы
+                            option(value="Москва") Москва, Новодмитровская 1, стр. 23, Универмаг "Марсаков", пространство Хлебозавод №9
+                            option(value="Интернет-магазин") Интернет-магазин
+                    .dropdown
+                        .dropdown__header
+                            p.dropdown__title Информация
+                        .dropdown__main.dropdown__main--small
+                            p Простой способ порадовать друзей и близких.
+                            p Выберите номинал и введите ваши данные. Эта сумма будет начислена вам в виде промокода. Также вы можете приобрести подарочный сертификат в наших розничных магазинах.
+                            p Используйте сертификат для покупки любых товаров на сайте и в розничных магазинах, а также оплачивайте доставку. Срок действия сертификата 1 год с момента покупки.
+                            p *Опция «Примерка» не распространяется на заказы, оплаченные электронным сертификатом.
+    .container
+        include ../components/subscription

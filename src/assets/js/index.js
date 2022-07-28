@@ -6,3 +6,4 @@ import './app/filters';
 import './app/dropdown';
 import './app/prompt';
 import './app/form';
+import './app/custom-select';

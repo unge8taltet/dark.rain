@@ -2,6 +2,52 @@ import Swiper, {Navigation, Pagination} from "swiper";
 
 window.addEventListener('DOMContentLoaded', () => {
 
+    const priceInputCert = document.querySelector('.js-price-input')
+    if(priceInputCert) {
+        priceInputCert.addEventListener('input', (e) => {
+            const sum = priceInputCert.value;
+            const certImages = document.querySelector('.js-cert-images')
+            priceInputCert.setAttribute('size', sum.length + 1);
+
+            if(certImages) {
+                certImages.classList.remove('cert-1000', 'cert-3000', 'cert-5000', 'cert-10000', 'cert-max');
+                switch (true) {
+                    case (sum > 999 && sum <= 2999) :
+                        certImages.classList.add('cert-3000');
+                        break;
+                    case (sum > 2999 && sum <= 4999) :
+                        certImages.classList.add('cert-5000');
+                        break;
+                    case (sum > 4999 && sum <= 9999) :
+                        certImages.classList.add('cert-10000');
+                        break;
+                    case (sum > 9999) :
+                        certImages.classList.add('cert-max');
+                        break;
+                    default :
+                        certImages.classList.add('cert-1000');
+                        break;
+                }
+            }
+        })
+    }
+
+    const certificateGetCheckbox = document.querySelector('#certificate-get')
+
+    if (certificateGetCheckbox) {
+        const certificateSelect = document.querySelector('#certificate-select')
+
+        certificateGetCheckbox.addEventListener('change', (e) => {
+            if (certificateSelect) {
+                if (certificateGetCheckbox.checked) {
+                    certificateSelect.classList.add('certificate__select--visible')
+                } else {
+                    certificateSelect.classList.remove('certificate__select--visible')
+                }
+            }
+        })
+    }
+
     const basketOpen = document.querySelector('.basket__open')
     const basketItems = document.querySelector('.basket__items')
     const basketEditing = document.querySelector('.basket__editing')
@@ -350,5 +396,6 @@ window.addEventListener('DOMContentLoaded', () => {
             }
         }
     }
+
     initMap()
 })

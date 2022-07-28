@@ -46,6 +46,7 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.15.4",
+    "custom-select": "^1.1.15",
     "imask": "^6.4.2",
     "nouislider": "^15.6.0",
     "swiper": "^8.2.6"
