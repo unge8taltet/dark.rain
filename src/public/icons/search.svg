@@ -1,8 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 26.0.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 16 16" style="enable-background:new 0 0 16 16;" xml:space="preserve">
-<path d="M14.4,14.5l-3.3-4c2-2.2,2-5.5,0-7.7C9,0.6,5.5,0.6,3.3,2.8c-1.1,1-1.7,2.4-1.7,3.9s0.5,2.9,1.6,3.9
-	c1.1,1.1,2.5,1.7,3.9,1.7c1.3,0,2.6-0.5,3.7-1.4l3.3,3.9L14.4,14.5z M3.5,10.3C2.6,9.3,2,8.1,2.1,6.7c0-1.4,0.5-2.7,1.5-3.6
-	c1-1,2.3-1.5,3.6-1.5s2.6,0.5,3.6,1.5c1.9,2,1.9,5.2-0.1,7.2S5.4,12.3,3.5,10.3z"/>
+<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<ellipse rx="5.71733" ry="5.66586" transform="matrix(0.668003 -0.652011 0.652393 0.668529 7.51556 7.5156)" stroke="black" stroke-width="1"/>
+<path d="M11.2285 11.3176L14.6133 15.4162" stroke="black" stroke-width="1"/>
 </svg>
